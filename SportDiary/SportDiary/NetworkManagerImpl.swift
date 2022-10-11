@@ -1,7 +1,11 @@
 import Foundation
 import UIKit
 
-class SportApi: ObservableObject {
+protocol NetworkManger {
+    func getAllExercises(completion: @escaping (Result<[Exercise], Error>) -> Void) async
+}
+
+class NetworkManagerImpl: ObservableObject, NetworkManger {
     
 //    @Published var exercises: [Exercise] = []
 //    @Published var loading: Bool = false

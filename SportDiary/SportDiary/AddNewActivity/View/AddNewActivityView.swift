@@ -43,11 +43,14 @@ struct AddNewActivityView: View {
                         AddNewActivityDaySelectionSection(selectedDay: $addNewActivityViewModel.selectedDay)
                         
                         ForEach(exercises) { exercise in
-                            Text(exercise.name)
-                            Text(exercise.bodyPart)
-                            Text(exercise.equipment)
-                            Text(exercise.target)
-                            Text(exercise.)
+                            VStack {
+                                Text(exercise.name)
+                                Text(exercise.bodyPart)
+                                Text(exercise.equipment)
+                                Text(exercise.target)
+                            }
+                            .background(Color.red)
+                            //Text(exercise.)
                         }
                     }
                     .padding(.top, 8)
@@ -59,6 +62,7 @@ struct AddNewActivityView: View {
         .task {
             try? await addNewActivityViewModel.getListOfAllExercises()
         }
+        .environmentObject(addNewActivityViewModel)
         
     }
 }

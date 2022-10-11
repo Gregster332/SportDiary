@@ -5,12 +5,9 @@ class AddNewActivityViewModel: ObservableObject {
     
     @Published var addNewActivityViewState: AddNewActivityViewState = .notStartedAnyTask
     @Published var selectedDay: String = ""
+    @Published var openForMoreInformation: Bool = false
     
-    var networkManager: SportApi
-    
-    init(networkManager: SportApi = SportApi()) {
-        self.networkManager = networkManager
-    }
+    @Inject private var networkManager: NetworkManger
     
     func getListOfAllExercises() async throws {
         addNewActivityViewState = .loading
