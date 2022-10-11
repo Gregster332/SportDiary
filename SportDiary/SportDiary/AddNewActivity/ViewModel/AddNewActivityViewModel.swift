@@ -6,6 +6,8 @@ class AddNewActivityViewModel: ObservableObject {
     @Published var addNewActivityViewState: AddNewActivityViewState = .notStartedAnyTask
     @Published var selectedDay: String = ""
     @Published var openForMoreInformation: Bool = false
+    @Published var addedInActivityProgram: Bool = false
+    @Published var finalActivityProgram: [Exercise] = []
     
     @Inject private var networkManager: NetworkManger
     
@@ -25,5 +27,4 @@ class AddNewActivityViewModel: ObservableObject {
             }
         }
     }
-    
 }

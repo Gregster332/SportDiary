@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C6CA3737887CA436E58F65C /* Pods_SportDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8D6D8F340116FBC9969378 /* Pods_SportDiary.framework */; };
+		D042311028F59F2600FF1D89 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = D042310F28F59F2600FF1D89 /* FLAnimatedImage */; };
+		D042311528F59F7100FF1D89 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042311428F59F7100FF1D89 /* NetworkManager.swift */; };
+		D042311728F5A36300FF1D89 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042311628F5A36300FF1D89 /* GifView.swift */; };
 		D0B78B4028F05DC1006F07A1 /* SportDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */; };
 		D0B78B4228F05DC1006F07A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B4128F05DC1006F07A1 /* ContentView.swift */; };
 		D0B78B4428F05DC2006F07A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B78B4328F05DC2006F07A1 /* Assets.xcassets */; };
@@ -31,8 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D8D6D8F340116FBC9969378 /* Pods_SportDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C28F1E42C3D87DC88213D9E0 /* Pods-SportDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportDiary.debug.xcconfig"; path = "Target Support Files/Pods-SportDiary/Pods-SportDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		D042311428F59F7100FF1D89 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D042311628F5A36300FF1D89 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		D0B78B3C28F05DC1006F07A1 /* SportDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDiaryApp.swift; sourceTree = "<group>"; };
 		D0B78B4128F05DC1006F07A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,7 +56,6 @@
 		D0B78B8828F58DDC006F07A1 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 		D0B78B8A28F58E23006F07A1 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		D0B78B8C28F58EE8006F07A1 /* InjectPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectPropertyWrapper.swift; sourceTree = "<group>"; };
-		F207B4E6077DBA896E5C4E9A /* Pods-SportDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportDiary.release.xcconfig"; path = "Target Support Files/Pods-SportDiary/Pods-SportDiary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,20 +63,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C6CA3737887CA436E58F65C /* Pods_SportDiary.framework in Frameworks */,
 				D0B78B8628F58D90006F07A1 /* Swinject in Frameworks */,
+				D042311028F59F2600FF1D89 /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04E82BC28692D3E530D06746 /* Frameworks */ = {
+		D042311128F59F4700FF1D89 /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				2D8D6D8F340116FBC9969378 /* Pods_SportDiary.framework */,
+				D0B78B8828F58DDC006F07A1 /* Resolver.swift */,
+				D0B78B8A28F58E23006F07A1 /* DependencyContainer.swift */,
+				D0B78B8C28F58EE8006F07A1 /* InjectPropertyWrapper.swift */,
 			);
-			name = Frameworks;
+			path = DI;
+			sourceTree = "<group>";
+		};
+		D042311228F59F5000FF1D89 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D0B78B4D28F05DF9006F07A1 /* NetworkManagerImpl.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D042311328F59F5C00FF1D89 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D042311428F59F7100FF1D89 /* NetworkManager.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		D0B78B3328F05DC1006F07A1 = {
@@ -83,8 +102,6 @@
 			children = (
 				D0B78B3E28F05DC1006F07A1 /* SportDiary */,
 				D0B78B3D28F05DC1006F07A1 /* Products */,
-				FB9A171AFE8F7CFE961FA2EC /* Pods */,
-				04E82BC28692D3E530D06746 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,12 +118,12 @@
 			children = (
 				D0B78B5128F06896006F07A1 /* Info.plist */,
 				D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */,
+				D042311328F59F5C00FF1D89 /* Protocols */,
 				D0B78B8728F58DB3006F07A1 /* HelpingUtils */,
 				D0B78B6228F40442006F07A1 /* UIComponents */,
 				D0B78B5428F3FC18006F07A1 /* Main */,
 				D0B78B5A28F40053006F07A1 /* ActivityList */,
 				D0B78B6728F407D2006F07A1 /* AddNewActivity */,
-				D0B78B4D28F05DF9006F07A1 /* NetworkManagerImpl.swift */,
 				D0B78B4328F05DC2006F07A1 /* Assets.xcassets */,
 				D0B78B4528F05DC2006F07A1 /* Preview Content */,
 			);
@@ -194,6 +211,7 @@
 				D0B78B6328F40469006F07A1 /* ActivityListRowView.swift */,
 				D0B78B6D28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift */,
 				D0B78B5228F07B4D006F07A1 /* ExerciseView.swift */,
+				D042311628F5A36300FF1D89 /* GifView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -236,20 +254,10 @@
 		D0B78B8728F58DB3006F07A1 /* HelpingUtils */ = {
 			isa = PBXGroup;
 			children = (
-				D0B78B8828F58DDC006F07A1 /* Resolver.swift */,
-				D0B78B8A28F58E23006F07A1 /* DependencyContainer.swift */,
-				D0B78B8C28F58EE8006F07A1 /* InjectPropertyWrapper.swift */,
+				D042311228F59F5000FF1D89 /* Networking */,
+				D042311128F59F4700FF1D89 /* DI */,
 			);
 			path = HelpingUtils;
-			sourceTree = "<group>";
-		};
-		FB9A171AFE8F7CFE961FA2EC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C28F1E42C3D87DC88213D9E0 /* Pods-SportDiary.debug.xcconfig */,
-				F207B4E6077DBA896E5C4E9A /* Pods-SportDiary.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +267,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0B78B4A28F05DC2006F07A1 /* Build configuration list for PBXNativeTarget "SportDiary" */;
 			buildPhases = (
-				BDFCB5B1E2890745D042C12B /* [CP] Check Pods Manifest.lock */,
 				D0B78B3828F05DC1006F07A1 /* Sources */,
 				D0B78B3928F05DC1006F07A1 /* Frameworks */,
 				D0B78B3A28F05DC1006F07A1 /* Resources */,
@@ -271,6 +278,7 @@
 			name = SportDiary;
 			packageProductDependencies = (
 				D0B78B8528F58D90006F07A1 /* Swinject */,
+				D042310F28F59F2600FF1D89 /* FLAnimatedImage */,
 			);
 			productName = SportDiary;
 			productReference = D0B78B3C28F05DC1006F07A1 /* SportDiary.app */;
@@ -302,6 +310,7 @@
 			mainGroup = D0B78B3328F05DC1006F07A1;
 			packageReferences = (
 				D0B78B8428F58D90006F07A1 /* XCRemoteSwiftPackageReference "Swinject" */,
+				D042310E28F59F2600FF1D89 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
 			);
 			productRefGroup = D0B78B3D28F05DC1006F07A1 /* Products */;
 			projectDirPath = "";
@@ -324,36 +333,12 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BDFCB5B1E2890745D042C12B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SportDiary-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		D0B78B3828F05DC1006F07A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D042311528F59F7100FF1D89 /* NetworkManager.swift in Sources */,
 				D0B78B8928F58DDC006F07A1 /* Resolver.swift in Sources */,
 				D0B78B5328F07B4D006F07A1 /* ExerciseView.swift in Sources */,
 				D0B78B6628F4049E006F07A1 /* ActivityListRow.swift in Sources */,
@@ -370,6 +355,7 @@
 				D0B78B6E28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift in Sources */,
 				D0B78B4028F05DC1006F07A1 /* SportDiaryApp.swift in Sources */,
 				D0B78B7228F42134006F07A1 /* AddNewActivityViewState.swift in Sources */,
+				D042311728F5A36300FF1D89 /* GifView.swift in Sources */,
 				D0B78B5F28F40099006F07A1 /* ActivityListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,7 +479,6 @@
 		};
 		D0B78B4B28F05DC2006F07A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C28F1E42C3D87DC88213D9E0 /* Pods-SportDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -525,7 +510,6 @@
 		};
 		D0B78B4C28F05DC2006F07A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F207B4E6077DBA896E5C4E9A /* Pods-SportDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -579,6 +563,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D042310E28F59F2600FF1D89 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		D0B78B8428F58D90006F07A1 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -590,6 +582,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D042310F28F59F2600FF1D89 /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D042310E28F59F2600FF1D89 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
 		D0B78B8528F58D90006F07A1 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D0B78B8428F58D90006F07A1 /* XCRemoteSwiftPackageReference "Swinject" */;

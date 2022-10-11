@@ -43,14 +43,9 @@ struct AddNewActivityView: View {
                         AddNewActivityDaySelectionSection(selectedDay: $addNewActivityViewModel.selectedDay)
                         
                         ForEach(exercises) { exercise in
-                            VStack {
-                                Text(exercise.name)
-                                Text(exercise.bodyPart)
-                                Text(exercise.equipment)
-                                Text(exercise.target)
-                            }
-                            .background(Color.red)
-                            //Text(exercise.)
+                            ExerciseView(
+                                exercise: exercise
+                            )
                         }
                     }
                     .padding(.top, 8)
