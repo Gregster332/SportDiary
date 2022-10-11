@@ -7,202 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B507E9F301E6BC9F4D8EB8043B01CD3 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A9992360094B4F62EB10D5E1E0BFE2 /* FLAnimatedImage.m */; };
-		42656EE69CA697C4F483ED44B688B529 /* FLAnimatedImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 745838E275BEB36156C4F29272235797 /* FLAnimatedImage-dummy.m */; };
-		49EBF9F83154DE0C9D5502C152416BF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4219BA7CAED0202261970996230F11F /* CoreGraphics.framework */; };
-		56687ED88A5F09B81B2296B3FDD12F4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BADAF97F77FC4003B3610E7ACA312E1 /* Foundation.framework */; };
-		5FEE18D5474B4B9B7AE6F5178B104BD3 /* Pods-SportDiary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1501715F22CE5A2186ED0262357817 /* Pods-SportDiary-dummy.m */; };
-		6E91C0E1F97D0DCA638585D647C0C075 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 453500D795302A5B71995FD970A38C5B /* FLAnimatedImageView.m */; };
-		8F9C5E00C70E926A7B6434D90E94A84F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BADAF97F77FC4003B3610E7ACA312E1 /* Foundation.framework */; };
-		9F7158EF1A3E6E778AB1F8712A3AA86E /* FLAnimatedImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D94F19E1FE96AE26327A3DCB2C4222AD /* FLAnimatedImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3757A50A2922E18FF698CBA54AC9E79 /* Pods-SportDiary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 779DCCA1FE15A97F22973B7BEFE3E490 /* Pods-SportDiary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C685FAE975137344D1474AD7E4096DA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EE3948404F12C5B6DA9AF99AB40738 /* QuartzCore.framework */; };
-		DB1D0708A4D56029D14636419B03F14C /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6975206C91B36A85890263B928AD47AA /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E113594EC32F9B04E66716925E7225C2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434BDB8968205C3B66ECCF4FCB2767A8 /* ImageIO.framework */; };
-		EA35339386CD1251FAD44A9E74A25D74 /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = B74E164070ACAF6DBF0A15ABA9AB785F /* FLAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5116971C2C962902E1CC87887C8CFAF4 /* Pods-SportDiary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ABC5EA4FE57211C43838E546A746B1AA /* Pods-SportDiary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CE417560836AB6A9E952BFEE633A42A /* Pods-SportDiary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AAFCEDFD720D345A1990C855C75A26 /* Pods-SportDiary-dummy.m */; };
+		7D1A1FF4B3A2959752038C4C091769CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5DB8764ACAF8B0D1CB835F5EA988282B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4A8E8992707D01510894596DB9BCCA00;
-			remoteInfo = FLAnimatedImage;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		01C3C067E25BF1CA3630FB0FAE44FAB7 /* Pods-SportDiary-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SportDiary-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0BADAF97F77FC4003B3610E7ACA312E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		0C374A079B6AF9BC87C7A0C3256E36F7 /* Pods-SportDiary-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SportDiary-Info.plist"; sourceTree = "<group>"; };
-		0C5D9B05D0418ADC656F0F1E7191F8FA /* FLAnimatedImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLAnimatedImage.release.xcconfig; sourceTree = "<group>"; };
-		1C1501715F22CE5A2186ED0262357817 /* Pods-SportDiary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SportDiary-dummy.m"; sourceTree = "<group>"; };
-		23AA2376FD094F0E7312FB871C7BE018 /* FLAnimatedImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FLAnimatedImage-Info.plist"; sourceTree = "<group>"; };
 		274A3519BC6C2407FEADE4E0D1C9E22D /* Pods-SportDiary */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SportDiary"; path = Pods_SportDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		40786663FE3A9C92DE80E3491E9E1068 /* Pods-SportDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SportDiary.release.xcconfig"; sourceTree = "<group>"; };
-		434BDB8968205C3B66ECCF4FCB2767A8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
-		43A9992360094B4F62EB10D5E1E0BFE2 /* FLAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImage.m; path = FLAnimatedImage/FLAnimatedImage.m; sourceTree = "<group>"; };
-		453500D795302A5B71995FD970A38C5B /* FLAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImageView.m; path = FLAnimatedImage/FLAnimatedImageView.m; sourceTree = "<group>"; };
-		6975206C91B36A85890263B928AD47AA /* FLAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImageView.h; path = FLAnimatedImage/include/FLAnimatedImageView.h; sourceTree = "<group>"; };
-		745838E275BEB36156C4F29272235797 /* FLAnimatedImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FLAnimatedImage-dummy.m"; sourceTree = "<group>"; };
-		779DCCA1FE15A97F22973B7BEFE3E490 /* Pods-SportDiary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SportDiary-umbrella.h"; sourceTree = "<group>"; };
-		967139F571BEEAC8E7DA7291532CCE18 /* Pods-SportDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SportDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		278B3D4BAC1DB195345D1C94943895BB /* Pods-SportDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SportDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		35350101E16DBDC226FF55E551D5D84A /* Pods-SportDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SportDiary.release.xcconfig"; sourceTree = "<group>"; };
+		3EE7AB96DC40A24AE22672818E8018E7 /* Pods-SportDiary-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SportDiary-acknowledgements.markdown"; sourceTree = "<group>"; };
+		58A74AD65B14A18C973962E720E32078 /* Pods-SportDiary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SportDiary.modulemap"; sourceTree = "<group>"; };
+		65E96342FA9625251A39E9D1B16A9195 /* Pods-SportDiary-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SportDiary-acknowledgements.plist"; sourceTree = "<group>"; };
+		71796A2018ECB0FD52056A641BBF179E /* Pods-SportDiary-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SportDiary-Info.plist"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AA507F10DB4A04C03F22F68A444C3D0B /* Pods-SportDiary-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SportDiary-frameworks.sh"; sourceTree = "<group>"; };
-		B74E164070ACAF6DBF0A15ABA9AB785F /* FLAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImage.h; path = FLAnimatedImage/include/FLAnimatedImage.h; sourceTree = "<group>"; };
-		C2A576A36B907313723DD046149DBAD9 /* Pods-SportDiary-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SportDiary-acknowledgements.plist"; sourceTree = "<group>"; };
-		CC0E5F5A575C277B33D26BAA24135C1D /* FLAnimatedImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLAnimatedImage.debug.xcconfig; sourceTree = "<group>"; };
-		CF2527FCC2CE37B7B80EAA8892725BAA /* FLAnimatedImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImage-prefix.pch"; sourceTree = "<group>"; };
-		D94F19E1FE96AE26327A3DCB2C4222AD /* FLAnimatedImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImage-umbrella.h"; sourceTree = "<group>"; };
-		F4219BA7CAED0202261970996230F11F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		F4E2B05F484951E3B0E44F1B49F23684 /* Pods-SportDiary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SportDiary.modulemap"; sourceTree = "<group>"; };
-		F5EE3948404F12C5B6DA9AF99AB40738 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		F8D1318E94015BEA0A4CDF0FF3C1EF1B /* FLAnimatedImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FLAnimatedImage.modulemap; sourceTree = "<group>"; };
-		FAA5F2D71B90788C908800A94534AA92 /* FLAnimatedImage */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FLAnimatedImage; path = FLAnimatedImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABC5EA4FE57211C43838E546A746B1AA /* Pods-SportDiary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SportDiary-umbrella.h"; sourceTree = "<group>"; };
+		E8AAFCEDFD720D345A1990C855C75A26 /* Pods-SportDiary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SportDiary-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		66EA4FFEBC42A175F2F8F73A17C682A5 /* Frameworks */ = {
+		F4C20134E28DFB50B308ADB6FC52B03B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49EBF9F83154DE0C9D5502C152416BF8 /* CoreGraphics.framework in Frameworks */,
-				56687ED88A5F09B81B2296B3FDD12F4B /* Foundation.framework in Frameworks */,
-				E113594EC32F9B04E66716925E7225C2 /* ImageIO.framework in Frameworks */,
-				C685FAE975137344D1474AD7E4096DA8 /* QuartzCore.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8A405A67FA1C6938C27D032C09CCEA31 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8F9C5E00C70E926A7B6434D90E94A84F /* Foundation.framework in Frameworks */,
+				7D1A1FF4B3A2959752038C4C091769CE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B23E791B8839DB6941C7EB499DAE965 /* Pods */ = {
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				FDB06735842FB3FBE5AB3C4E35E664C4 /* FLAnimatedImage */,
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
-			name = Pods;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		60232665171B90DA246EFBB82D587433 /* Support Files */ = {
+		866875867A061BC294BACDF9EE609F7A /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F8D1318E94015BEA0A4CDF0FF3C1EF1B /* FLAnimatedImage.modulemap */,
-				745838E275BEB36156C4F29272235797 /* FLAnimatedImage-dummy.m */,
-				23AA2376FD094F0E7312FB871C7BE018 /* FLAnimatedImage-Info.plist */,
-				CF2527FCC2CE37B7B80EAA8892725BAA /* FLAnimatedImage-prefix.pch */,
-				D94F19E1FE96AE26327A3DCB2C4222AD /* FLAnimatedImage-umbrella.h */,
-				CC0E5F5A575C277B33D26BAA24135C1D /* FLAnimatedImage.debug.xcconfig */,
-				0C5D9B05D0418ADC656F0F1E7191F8FA /* FLAnimatedImage.release.xcconfig */,
+				D1C6F9EB1BE22AEFD13A3292A5310991 /* Pods-SportDiary */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/FLAnimatedImage";
-			sourceTree = "<group>";
-		};
-		7940D075DFA96A78BD8A3B9EADC69615 /* Pods-SportDiary */ = {
-			isa = PBXGroup;
-			children = (
-				F4E2B05F484951E3B0E44F1B49F23684 /* Pods-SportDiary.modulemap */,
-				01C3C067E25BF1CA3630FB0FAE44FAB7 /* Pods-SportDiary-acknowledgements.markdown */,
-				C2A576A36B907313723DD046149DBAD9 /* Pods-SportDiary-acknowledgements.plist */,
-				1C1501715F22CE5A2186ED0262357817 /* Pods-SportDiary-dummy.m */,
-				AA507F10DB4A04C03F22F68A444C3D0B /* Pods-SportDiary-frameworks.sh */,
-				0C374A079B6AF9BC87C7A0C3256E36F7 /* Pods-SportDiary-Info.plist */,
-				779DCCA1FE15A97F22973B7BEFE3E490 /* Pods-SportDiary-umbrella.h */,
-				967139F571BEEAC8E7DA7291532CCE18 /* Pods-SportDiary.debug.xcconfig */,
-				40786663FE3A9C92DE80E3491E9E1068 /* Pods-SportDiary.release.xcconfig */,
-			);
-			name = "Pods-SportDiary";
-			path = "Target Support Files/Pods-SportDiary";
-			sourceTree = "<group>";
-		};
-		B6541E7D20DCA336816487DF475F865C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FAA5F2D71B90788C908800A94534AA92 /* FLAnimatedImage */,
-				274A3519BC6C2407FEADE4E0D1C9E22D /* Pods-SportDiary */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FC5800BB3AAFD3E119788196BC84235B /* iOS */,
-			);
-			name = Frameworks;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
-				4B23E791B8839DB6941C7EB499DAE965 /* Pods */,
-				B6541E7D20DCA336816487DF475F865C /* Products */,
-				FE52E034509484EFB80D6B2AB0F38EAD /* Targets Support Files */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				F8B56F8F558A718B848BF304F759FAC8 /* Products */,
+				866875867A061BC294BACDF9EE609F7A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		FC5800BB3AAFD3E119788196BC84235B /* iOS */ = {
+		D1C6F9EB1BE22AEFD13A3292A5310991 /* Pods-SportDiary */ = {
 			isa = PBXGroup;
 			children = (
-				F4219BA7CAED0202261970996230F11F /* CoreGraphics.framework */,
-				0BADAF97F77FC4003B3610E7ACA312E1 /* Foundation.framework */,
-				434BDB8968205C3B66ECCF4FCB2767A8 /* ImageIO.framework */,
-				F5EE3948404F12C5B6DA9AF99AB40738 /* QuartzCore.framework */,
+				58A74AD65B14A18C973962E720E32078 /* Pods-SportDiary.modulemap */,
+				3EE7AB96DC40A24AE22672818E8018E7 /* Pods-SportDiary-acknowledgements.markdown */,
+				65E96342FA9625251A39E9D1B16A9195 /* Pods-SportDiary-acknowledgements.plist */,
+				E8AAFCEDFD720D345A1990C855C75A26 /* Pods-SportDiary-dummy.m */,
+				71796A2018ECB0FD52056A641BBF179E /* Pods-SportDiary-Info.plist */,
+				ABC5EA4FE57211C43838E546A746B1AA /* Pods-SportDiary-umbrella.h */,
+				278B3D4BAC1DB195345D1C94943895BB /* Pods-SportDiary.debug.xcconfig */,
+				35350101E16DBDC226FF55E551D5D84A /* Pods-SportDiary.release.xcconfig */,
 			);
-			name = iOS;
+			name = "Pods-SportDiary";
+			path = "Target Support Files/Pods-SportDiary";
 			sourceTree = "<group>";
 		};
-		FDB06735842FB3FBE5AB3C4E35E664C4 /* FLAnimatedImage */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B74E164070ACAF6DBF0A15ABA9AB785F /* FLAnimatedImage.h */,
-				43A9992360094B4F62EB10D5E1E0BFE2 /* FLAnimatedImage.m */,
-				6975206C91B36A85890263B928AD47AA /* FLAnimatedImageView.h */,
-				453500D795302A5B71995FD970A38C5B /* FLAnimatedImageView.m */,
-				60232665171B90DA246EFBB82D587433 /* Support Files */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
-			name = FLAnimatedImage;
-			path = FLAnimatedImage;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FE52E034509484EFB80D6B2AB0F38EAD /* Targets Support Files */ = {
+		F8B56F8F558A718B848BF304F759FAC8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7940D075DFA96A78BD8A3B9EADC69615 /* Pods-SportDiary */,
+				274A3519BC6C2407FEADE4E0D1C9E22D /* Pods-SportDiary */,
 			);
-			name = "Targets Support Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5DAE22AE09E0A7991AA980A7F423975D /* Headers */ = {
+		3201BFFFCFCFE8BE9DD10108C338A020 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3757A50A2922E18FF698CBA54AC9E79 /* Pods-SportDiary-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE3373F71AF2BB04C511FA5A42C2058A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA35339386CD1251FAD44A9E74A25D74 /* FLAnimatedImage.h in Headers */,
-				9F7158EF1A3E6E778AB1F8712A3AA86E /* FLAnimatedImage-umbrella.h in Headers */,
-				DB1D0708A4D56029D14636419B03F14C /* FLAnimatedImageView.h in Headers */,
+				5116971C2C962902E1CC87887C8CFAF4 /* Pods-SportDiary-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,39 +112,20 @@
 /* Begin PBXNativeTarget section */
 		287EDC5D1DCC6AFBC487176F90C640B3 /* Pods-SportDiary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C4269328992B1D78A3DD051FD0A853B /* Build configuration list for PBXNativeTarget "Pods-SportDiary" */;
+			buildConfigurationList = E2A62B3F2FCCDC9FA98FC06B3048D277 /* Build configuration list for PBXNativeTarget "Pods-SportDiary" */;
 			buildPhases = (
-				5DAE22AE09E0A7991AA980A7F423975D /* Headers */,
-				C4CA7671ECBD6386C7A44DCFCD78273F /* Sources */,
-				8A405A67FA1C6938C27D032C09CCEA31 /* Frameworks */,
-				DEF8CD44C77F3658257B42F53D4B6B7A /* Resources */,
+				3201BFFFCFCFE8BE9DD10108C338A020 /* Headers */,
+				65759FFA078F4B6D2EB9E84B961D083C /* Sources */,
+				F4C20134E28DFB50B308ADB6FC52B03B /* Frameworks */,
+				D98A264A09FA23727A031EAD116A22F1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F4E238F78DC81CEB7DBFDBB89CC6032A /* PBXTargetDependency */,
 			);
 			name = "Pods-SportDiary";
 			productName = Pods_SportDiary;
 			productReference = 274A3519BC6C2407FEADE4E0D1C9E22D /* Pods-SportDiary */;
-			productType = "com.apple.product-type.framework";
-		};
-		4A8E8992707D01510894596DB9BCCA00 /* FLAnimatedImage */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C47E0D5D26BAF11FAF05112183104AB6 /* Build configuration list for PBXNativeTarget "FLAnimatedImage" */;
-			buildPhases = (
-				CE3373F71AF2BB04C511FA5A42C2058A /* Headers */,
-				1E8EC3E234C7C9360E20549F894EEE37 /* Sources */,
-				66EA4FFEBC42A175F2F8F73A17C682A5 /* Frameworks */,
-				6647735695BF982109ADB4F4B55B7017 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FLAnimatedImage;
-			productName = FLAnimatedImage;
-			productReference = FAA5F2D71B90788C908800A94534AA92 /* FLAnimatedImage */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -264,25 +146,17 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = B6541E7D20DCA336816487DF475F865C /* Products */;
+			productRefGroup = F8B56F8F558A718B848BF304F759FAC8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A8E8992707D01510894596DB9BCCA00 /* FLAnimatedImage */,
 				287EDC5D1DCC6AFBC487176F90C640B3 /* Pods-SportDiary */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6647735695BF982109ADB4F4B55B7017 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DEF8CD44C77F3658257B42F53D4B6B7A /* Resources */ = {
+		D98A264A09FA23727A031EAD116A22F1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,34 +166,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1E8EC3E234C7C9360E20549F894EEE37 /* Sources */ = {
+		65759FFA078F4B6D2EB9E84B961D083C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B507E9F301E6BC9F4D8EB8043B01CD3 /* FLAnimatedImage.m in Sources */,
-				42656EE69CA697C4F483ED44B688B529 /* FLAnimatedImage-dummy.m in Sources */,
-				6E91C0E1F97D0DCA638585D647C0C075 /* FLAnimatedImageView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4CA7671ECBD6386C7A44DCFCD78273F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5FEE18D5474B4B9B7AE6F5178B104BD3 /* Pods-SportDiary-dummy.m in Sources */,
+				5CE417560836AB6A9E952BFEE633A42A /* Pods-SportDiary-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F4E238F78DC81CEB7DBFDBB89CC6032A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FLAnimatedImage;
-			target = 4A8E8992707D01510894596DB9BCCA00 /* FLAnimatedImage */;
-			targetProxy = 5DB8764ACAF8B0D1CB835F5EA988282B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		09909ECBA13E8F70A928465E7F7A9A92 /* Debug */ = {
@@ -388,79 +243,6 @@
 			};
 			name = Debug;
 		};
-		1D69D0421A20B6AA4823D7A8B2979096 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40786663FE3A9C92DE80E3491E9E1068 /* Pods-SportDiary.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SportDiary/Pods-SportDiary-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SportDiary/Pods-SportDiary.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		27B8B3DCD5178F92BD52144B780ACC30 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C5D9B05D0418ADC656F0F1E7191F8FA /* FLAnimatedImage.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FLAnimatedImage/FLAnimatedImage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FLAnimatedImage/FLAnimatedImage-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/FLAnimatedImage/FLAnimatedImage.modulemap";
-				PRODUCT_MODULE_NAME = FLAnimatedImage;
-				PRODUCT_NAME = FLAnimatedImage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		2DE0D8898245310716431F92FA4989FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -523,9 +305,9 @@
 			};
 			name = Release;
 		};
-		55C377D9E9E482EFC2B9CECD317BDF92 /* Debug */ = {
+		2F2A17F6E8D907592BBCC687DFC07E59 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 967139F571BEEAC8E7DA7291532CCE18 /* Pods-SportDiary.debug.xcconfig */;
+			baseConfigurationReference = 278B3D4BAC1DB195345D1C94943895BB /* Pods-SportDiary.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -560,10 +342,12 @@
 			};
 			name = Debug;
 		};
-		D601095F1A4ED71897812C817A0EF4C1 /* Debug */ = {
+		72EFA26B1968AAE886CAD850974E1845 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC0E5F5A575C277B33D26BAA24135C1D /* FLAnimatedImage.debug.xcconfig */;
+			baseConfigurationReference = 35350101E16DBDC226FF55E551D5D84A /* Pods-SportDiary.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -572,27 +356,29 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FLAnimatedImage/FLAnimatedImage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FLAnimatedImage/FLAnimatedImage-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SportDiary/Pods-SportDiary-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/FLAnimatedImage/FLAnimatedImage.modulemap";
-				PRODUCT_MODULE_NAME = FLAnimatedImage;
-				PRODUCT_NAME = FLAnimatedImage;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SportDiary/Pods-SportDiary.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -606,20 +392,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C4269328992B1D78A3DD051FD0A853B /* Build configuration list for PBXNativeTarget "Pods-SportDiary" */ = {
+		E2A62B3F2FCCDC9FA98FC06B3048D277 /* Build configuration list for PBXNativeTarget "Pods-SportDiary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				55C377D9E9E482EFC2B9CECD317BDF92 /* Debug */,
-				1D69D0421A20B6AA4823D7A8B2979096 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C47E0D5D26BAF11FAF05112183104AB6 /* Build configuration list for PBXNativeTarget "FLAnimatedImage" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D601095F1A4ED71897812C817A0EF4C1 /* Debug */,
-				27B8B3DCD5178F92BD52144B780ACC30 /* Release */,
+				2F2A17F6E8D907592BBCC687DFC07E59 /* Debug */,
+				72EFA26B1968AAE886CAD850974E1845 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

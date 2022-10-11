@@ -12,7 +12,7 @@
 		D0B78B4228F05DC1006F07A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B4128F05DC1006F07A1 /* ContentView.swift */; };
 		D0B78B4428F05DC2006F07A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B78B4328F05DC2006F07A1 /* Assets.xcassets */; };
 		D0B78B4728F05DC2006F07A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B78B4628F05DC2006F07A1 /* Preview Assets.xcassets */; };
-		D0B78B4E28F05DF9006F07A1 /* SportAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B4D28F05DF9006F07A1 /* SportAPI.swift */; };
+		D0B78B4E28F05DF9006F07A1 /* NetworkManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B4D28F05DF9006F07A1 /* NetworkManagerImpl.swift */; };
 		D0B78B5328F07B4D006F07A1 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B5228F07B4D006F07A1 /* ExerciseView.swift */; };
 		D0B78B5928F3FC4B006F07A1 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B5828F3FC4B006F07A1 /* MainScreen.swift */; };
 		D0B78B5F28F40099006F07A1 /* ActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B5E28F40099006F07A1 /* ActivityListView.swift */; };
@@ -24,6 +24,10 @@
 		D0B78B7028F41551006F07A1 /* AddNewActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6F28F41551006F07A1 /* AddNewActivityViewModel.swift */; };
 		D0B78B7228F42134006F07A1 /* AddNewActivityViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B7128F42134006F07A1 /* AddNewActivityViewState.swift */; };
 		D0B78B7428F421B3006F07A1 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B7328F421B3006F07A1 /* Exercise.swift */; };
+		D0B78B8628F58D90006F07A1 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D0B78B8528F58D90006F07A1 /* Swinject */; };
+		D0B78B8928F58DDC006F07A1 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B8828F58DDC006F07A1 /* Resolver.swift */; };
+		D0B78B8B28F58E23006F07A1 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B8A28F58E23006F07A1 /* DependencyContainer.swift */; };
+		D0B78B8D28F58EE8006F07A1 /* InjectPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B8C28F58EE8006F07A1 /* InjectPropertyWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +38,7 @@
 		D0B78B4128F05DC1006F07A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D0B78B4328F05DC2006F07A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0B78B4628F05DC2006F07A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D0B78B4D28F05DF9006F07A1 /* SportAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportAPI.swift; sourceTree = "<group>"; };
+		D0B78B4D28F05DF9006F07A1 /* NetworkManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerImpl.swift; sourceTree = "<group>"; };
 		D0B78B5128F06896006F07A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D0B78B5228F07B4D006F07A1 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		D0B78B5828F3FC4B006F07A1 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
@@ -47,6 +51,9 @@
 		D0B78B6F28F41551006F07A1 /* AddNewActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityViewModel.swift; sourceTree = "<group>"; };
 		D0B78B7128F42134006F07A1 /* AddNewActivityViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityViewState.swift; sourceTree = "<group>"; };
 		D0B78B7328F421B3006F07A1 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		D0B78B8828F58DDC006F07A1 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		D0B78B8A28F58E23006F07A1 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		D0B78B8C28F58EE8006F07A1 /* InjectPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectPropertyWrapper.swift; sourceTree = "<group>"; };
 		F207B4E6077DBA896E5C4E9A /* Pods-SportDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportDiary.release.xcconfig"; path = "Target Support Files/Pods-SportDiary/Pods-SportDiary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C6CA3737887CA436E58F65C /* Pods_SportDiary.framework in Frameworks */,
+				D0B78B8628F58D90006F07A1 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,12 +101,12 @@
 			children = (
 				D0B78B5128F06896006F07A1 /* Info.plist */,
 				D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */,
+				D0B78B8728F58DB3006F07A1 /* HelpingUtils */,
 				D0B78B6228F40442006F07A1 /* UIComponents */,
 				D0B78B5428F3FC18006F07A1 /* Main */,
 				D0B78B5A28F40053006F07A1 /* ActivityList */,
 				D0B78B6728F407D2006F07A1 /* AddNewActivity */,
-				D0B78B4D28F05DF9006F07A1 /* SportAPI.swift */,
-				D0B78B5228F07B4D006F07A1 /* ExerciseView.swift */,
+				D0B78B4D28F05DF9006F07A1 /* NetworkManagerImpl.swift */,
 				D0B78B4328F05DC2006F07A1 /* Assets.xcassets */,
 				D0B78B4528F05DC2006F07A1 /* Preview Content */,
 			);
@@ -185,6 +193,7 @@
 			children = (
 				D0B78B6328F40469006F07A1 /* ActivityListRowView.swift */,
 				D0B78B6D28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift */,
+				D0B78B5228F07B4D006F07A1 /* ExerciseView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -224,6 +233,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D0B78B8728F58DB3006F07A1 /* HelpingUtils */ = {
+			isa = PBXGroup;
+			children = (
+				D0B78B8828F58DDC006F07A1 /* Resolver.swift */,
+				D0B78B8A28F58E23006F07A1 /* DependencyContainer.swift */,
+				D0B78B8C28F58EE8006F07A1 /* InjectPropertyWrapper.swift */,
+			);
+			path = HelpingUtils;
+			sourceTree = "<group>";
+		};
 		FB9A171AFE8F7CFE961FA2EC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,13 +263,15 @@
 				D0B78B3828F05DC1006F07A1 /* Sources */,
 				D0B78B3928F05DC1006F07A1 /* Frameworks */,
 				D0B78B3A28F05DC1006F07A1 /* Resources */,
-				73B4D2E1F43ED614E1F13E13 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SportDiary;
+			packageProductDependencies = (
+				D0B78B8528F58D90006F07A1 /* Swinject */,
+			);
 			productName = SportDiary;
 			productReference = D0B78B3C28F05DC1006F07A1 /* SportDiary.app */;
 			productType = "com.apple.product-type.application";
@@ -279,6 +300,9 @@
 				Base,
 			);
 			mainGroup = D0B78B3328F05DC1006F07A1;
+			packageReferences = (
+				D0B78B8428F58D90006F07A1 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = D0B78B3D28F05DC1006F07A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -301,23 +325,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		73B4D2E1F43ED614E1F13E13 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SportDiary/Pods-SportDiary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SportDiary/Pods-SportDiary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SportDiary/Pods-SportDiary-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BDFCB5B1E2890745D042C12B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,16 +354,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B78B8928F58DDC006F07A1 /* Resolver.swift in Sources */,
 				D0B78B5328F07B4D006F07A1 /* ExerciseView.swift in Sources */,
 				D0B78B6628F4049E006F07A1 /* ActivityListRow.swift in Sources */,
 				D0B78B6428F40469006F07A1 /* ActivityListRowView.swift in Sources */,
 				D0B78B6128F401D3006F07A1 /* ActivityListViewModel.swift in Sources */,
 				D0B78B7028F41551006F07A1 /* AddNewActivityViewModel.swift in Sources */,
+				D0B78B8B28F58E23006F07A1 /* DependencyContainer.swift in Sources */,
 				D0B78B7428F421B3006F07A1 /* Exercise.swift in Sources */,
 				D0B78B6C28F40816006F07A1 /* AddNewActivityView.swift in Sources */,
 				D0B78B4228F05DC1006F07A1 /* ContentView.swift in Sources */,
+				D0B78B8D28F58EE8006F07A1 /* InjectPropertyWrapper.swift in Sources */,
 				D0B78B5928F3FC4B006F07A1 /* MainScreen.swift in Sources */,
-				D0B78B4E28F05DF9006F07A1 /* SportAPI.swift in Sources */,
+				D0B78B4E28F05DF9006F07A1 /* NetworkManagerImpl.swift in Sources */,
 				D0B78B6E28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift in Sources */,
 				D0B78B4028F05DC1006F07A1 /* SportDiaryApp.swift in Sources */,
 				D0B78B7228F42134006F07A1 /* AddNewActivityViewState.swift in Sources */,
@@ -490,6 +500,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SportDiary/Preview Content\"";
+				DEVELOPMENT_TEAM = 88DU546X6V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportDiary/Info.plist;
@@ -521,6 +532,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SportDiary/Preview Content\"";
+				DEVELOPMENT_TEAM = 88DU546X6V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportDiary/Info.plist;
@@ -565,6 +577,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0B78B8428F58D90006F07A1 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.8.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0B78B8528F58D90006F07A1 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0B78B8428F58D90006F07A1 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D0B78B3428F05DC1006F07A1 /* Project object */;
 }
