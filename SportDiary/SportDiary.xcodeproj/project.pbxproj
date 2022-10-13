@@ -10,6 +10,7 @@
 		D042311028F59F2600FF1D89 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = D042310F28F59F2600FF1D89 /* FLAnimatedImage */; };
 		D042311528F59F7100FF1D89 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042311428F59F7100FF1D89 /* NetworkManager.swift */; };
 		D042311728F5A36300FF1D89 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042311628F5A36300FF1D89 /* GifView.swift */; };
+		D09DC07328F85A78007DDACC /* ChooseDayOfActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */; };
 		D0B78B4028F05DC1006F07A1 /* SportDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */; };
 		D0B78B4228F05DC1006F07A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B4128F05DC1006F07A1 /* ContentView.swift */; };
 		D0B78B4428F05DC2006F07A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B78B4328F05DC2006F07A1 /* Assets.xcassets */; };
@@ -21,7 +22,7 @@
 		D0B78B6128F401D3006F07A1 /* ActivityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6028F401D3006F07A1 /* ActivityListViewModel.swift */; };
 		D0B78B6428F40469006F07A1 /* ActivityListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6328F40469006F07A1 /* ActivityListRowView.swift */; };
 		D0B78B6628F4049E006F07A1 /* ActivityListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6528F4049E006F07A1 /* ActivityListRow.swift */; };
-		D0B78B6C28F40816006F07A1 /* AddNewActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6B28F40816006F07A1 /* AddNewActivityView.swift */; };
+		D0B78B6C28F40816006F07A1 /* ChooseSetOfExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6B28F40816006F07A1 /* ChooseSetOfExercisesView.swift */; };
 		D0B78B6E28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6D28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift */; };
 		D0B78B7028F41551006F07A1 /* AddNewActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6F28F41551006F07A1 /* AddNewActivityViewModel.swift */; };
 		D0B78B7228F42134006F07A1 /* AddNewActivityViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B7128F42134006F07A1 /* AddNewActivityViewState.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		D042311428F59F7100FF1D89 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D042311628F5A36300FF1D89 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
+		D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDayOfActivityView.swift; sourceTree = "<group>"; };
 		D0B78B3C28F05DC1006F07A1 /* SportDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDiaryApp.swift; sourceTree = "<group>"; };
 		D0B78B4128F05DC1006F07A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,7 +50,7 @@
 		D0B78B6028F401D3006F07A1 /* ActivityListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListViewModel.swift; sourceTree = "<group>"; };
 		D0B78B6328F40469006F07A1 /* ActivityListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListRowView.swift; sourceTree = "<group>"; };
 		D0B78B6528F4049E006F07A1 /* ActivityListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListRow.swift; sourceTree = "<group>"; };
-		D0B78B6B28F40816006F07A1 /* AddNewActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityView.swift; sourceTree = "<group>"; };
+		D0B78B6B28F40816006F07A1 /* ChooseSetOfExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSetOfExercisesView.swift; sourceTree = "<group>"; };
 		D0B78B6D28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityDaySelectionSection.swift; sourceTree = "<group>"; };
 		D0B78B6F28F41551006F07A1 /* AddNewActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityViewModel.swift; sourceTree = "<group>"; };
 		D0B78B7128F42134006F07A1 /* AddNewActivityViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityViewState.swift; sourceTree = "<group>"; };
@@ -246,7 +248,8 @@
 		D0B78B6A28F40804006F07A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D0B78B6B28F40816006F07A1 /* AddNewActivityView.swift */,
+				D0B78B6B28F40816006F07A1 /* ChooseSetOfExercisesView.swift */,
+				D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,10 +350,11 @@
 				D0B78B7028F41551006F07A1 /* AddNewActivityViewModel.swift in Sources */,
 				D0B78B8B28F58E23006F07A1 /* DependencyContainer.swift in Sources */,
 				D0B78B7428F421B3006F07A1 /* Exercise.swift in Sources */,
-				D0B78B6C28F40816006F07A1 /* AddNewActivityView.swift in Sources */,
+				D0B78B6C28F40816006F07A1 /* ChooseSetOfExercisesView.swift in Sources */,
 				D0B78B4228F05DC1006F07A1 /* ContentView.swift in Sources */,
 				D0B78B8D28F58EE8006F07A1 /* InjectPropertyWrapper.swift in Sources */,
 				D0B78B5928F3FC4B006F07A1 /* MainScreen.swift in Sources */,
+				D09DC07328F85A78007DDACC /* ChooseDayOfActivityView.swift in Sources */,
 				D0B78B4E28F05DF9006F07A1 /* NetworkManagerImpl.swift in Sources */,
 				D0B78B6E28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift in Sources */,
 				D0B78B4028F05DC1006F07A1 /* SportDiaryApp.swift in Sources */,

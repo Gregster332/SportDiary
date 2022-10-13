@@ -45,7 +45,7 @@ struct ExerciseView: View {
                         Text(openForMoreInformation ? "Close" : "More information")
                         Image(systemName: openForMoreInformation ? "arrow.turn.right.up" : "arrow.turn.right.down")
                     }
-                    .foregroundColor(.indigo)
+                    .foregroundColor(Color("navBarColor"))
                 }
                 .padding(.trailing, 8)
             }
@@ -76,9 +76,10 @@ struct ExerciseView: View {
         .padding(.vertical, 8)
         .frame(maxWidth: .infinity)
         .background(addedInActivityProgram ?
-                    Color.green.opacity(0.2) :
-                        Color.white)
-        .cornerRadius(10)
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.green, lineWidth: 1) :
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.gray, lineWidth: 1))
         .padding(.horizontal, 8)
         .onTapGesture {
             if !addNewActivityViewModel.finalActivityProgram.contains(where: { exercise in

@@ -24,8 +24,7 @@ struct ActivityListView: View {
                     Spacer()
                     
                     NavigationLink(destination: {
-                        AddNewActivityView()
-                            .navigationBarHidden(true)
+                        ChooseDayOfActivityView()
                     }, label: {
                         Image(systemName: "plus")
                     })
