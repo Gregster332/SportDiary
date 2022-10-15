@@ -1,7 +1,6 @@
 import Foundation
+import RealmSwift
 
 class MainScreenViewModel: ObservableObject {
-    
-    @Published var addNewActivityProgramIsOpen: Bool = false
     
 }

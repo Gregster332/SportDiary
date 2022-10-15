@@ -13,24 +13,56 @@ struct ActivityListView: View {
     @StateObject var activityListViewModel: ActivityListViewModel = ActivityListViewModel()
     
     var body: some View {
+        NavigationView {
             VStack {
-                ScrollView {
-                    ForEach(activityListViewModel.exercisesPrograms, id: \.self) { program in
-                        ActivityListRowView(
-                            activityListRow: ActivityListRow(
-                                name: program.name,
-                                dayOfWeek: program.dayOfProgram,
-                                exercises: program.exercises
-                            )
-                        )
+                    ScrollView {
+                        ForEach(activityListViewModel.exercisesPrograms, id: \.self) { program in
+                            ZStack(alignment: .topTrailing) {
+                                ActivityListRowView(
+                                    activityListRow: ActivityListRow(
+                                        name: program.name,
+                                        dayOfWeek: program.dayOfProgram,
+                                        exercises: program.exercises
+                                    )
+                                )
+                                
+                                Button {
+                                    activityListViewModel.deleteExerciseProgram(program: program)
+                                    activityListViewModel.getAllExercisesPrograms()
+                                } label: {
+                                    Image(systemName: "trash.circle.fill")
+                                        .font(.title)
+                                        .foregroundColor(.red)
+                                }
+                                .padding(.trailing)
+                                .padding(.top)
+                            }
+                        }
                     }
                 }
-            }
-            .padding(.top, 8)
+                .padding(.top, 8)
             .padding(.bottom, 8)
+            
+            .navigationTitle("Activities")
+            .toolbar {
+                Button {
+                    activityListViewModel.addNewActivityProgramIsOpen = true
+                } label: {
+                    Image(systemName: "plus")
+                        .foregroundColor(Color("navBarColor"))
+                }
+
+            }
+            .fullScreenCover(isPresented: $activityListViewModel.addNewActivityProgramIsOpen) {
+                AddNewActivityPageView()
+                    .onDisappear {
+                        activityListViewModel.getAllExercisesPrograms()
+                    }
+            }
             .onAppear {
                 activityListViewModel.getAllExercisesPrograms()
             }
+        }
     }
 }
 

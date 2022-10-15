@@ -4,14 +4,19 @@ import RealmSwift
 class ActivityListViewModel: ObservableObject {
     
     let dayOfWeeks: DayOfWeek = .monday
-    @Published var openAddNewActivityView: Bool = false
+    
     @Published var exercisesPrograms: [ExerciseProgram] = []
+    @Published var addNewActivityProgramIsOpen: Bool = false
     
     @Inject private var realmManager: RealMManager
     
     func getAllExercisesPrograms() {
         exercisesPrograms = Array(realmManager.getAllExercises())
-        print(exercisesPrograms)
+    }
+    
+    func deleteExerciseProgram(program: ExerciseProgram) {
+        print("=============delete===============")
+        realmManager.deleteObject(exerciseProgram: program)
     }
     
 }

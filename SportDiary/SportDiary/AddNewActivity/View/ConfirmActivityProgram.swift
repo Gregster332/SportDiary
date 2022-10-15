@@ -93,7 +93,6 @@ struct ConfirmActivityProgram: View {
             .padding(.horizontal, 8)
             
             Button {
-                print(addNewActivityViewModel.finalActivityProgram.convertToList())
                 addNewActivityViewModel.saveNewProgram(
                     program: ExerciseProgram(
                         name: text,
