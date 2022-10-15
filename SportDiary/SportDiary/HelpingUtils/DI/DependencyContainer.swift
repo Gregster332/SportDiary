@@ -9,6 +9,11 @@ func buildContainer() -> Container {
         return NetworkManagerImpl()
     }
     .inObjectScope(.container)
+    
+    container.register(RealMManager.self) { _ in
+        return RealMManagerImpl()
+    }
+    .inObjectScope(.container)
 
     return container
 }

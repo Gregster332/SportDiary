@@ -3,8 +3,8 @@ import UIKit
 
 class NetworkManagerImpl: ObservableObject, NetworkManger {
     
-    private let headers = [
-        "X-RapidAPI-Key": "b2963da0fdmsh66c20dfbd80b4ebp1a219fjsncf6fd681345e",
+    let headers = [
+        "X-RapidAPI-Key": "bcb05a9379mshb92cc3b7a7761d0p1c6576jsn682703f0c7d0",
         "X-RapidAPI-Host": "exercisedb.p.rapidapi.com"
     ]
     
@@ -17,7 +17,6 @@ class NetworkManagerImpl: ObservableObject, NetworkManger {
         request.allHTTPHeaderFields = headers
         
         let session = URLSession.shared
-        //loading = true
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             if let error = error {
                 completion(.failure(error))

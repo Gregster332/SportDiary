@@ -6,45 +6,31 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ActivityListView: View {
     
     @StateObject var activityListViewModel: ActivityListViewModel = ActivityListViewModel()
     
     var body: some View {
-        NavigationView {
-            
             VStack {
-                
-                HStack {
-                    Text("Activity List")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                    
-                    Spacer()
-                    
-                    NavigationLink(destination: {
-                        ChooseDayOfActivityView()
-                    }, label: {
-                        Image(systemName: "plus")
-                    })
-                    
-                }
-                .padding(.horizontal, 16)
-                
                 ScrollView {
-                    ForEach(activityListViewModel.dayOfWeeks, id: \.self) { day in
-                        ActivityListRowView(activityListRow: ActivityListRow(title: day, exercises: nil))
+                    ForEach(activityListViewModel.exercisesPrograms, id: \.self) { program in
+                        ActivityListRowView(
+                            activityListRow: ActivityListRow(
+                                name: program.name,
+                                dayOfWeek: program.dayOfProgram,
+                                exercises: program.exercises
+                            )
+                        )
                     }
                 }
-                
             }
             .padding(.top, 8)
             .padding(.bottom, 8)
-            
-            .navigationTitle(Text("Activity List"))
-            .navigationBarHidden(true)
-        }
+            .onAppear {
+                activityListViewModel.getAllExercisesPrograms()
+            }
     }
 }
 
@@ -52,4 +38,20 @@ struct ActivityListView_Previews: PreviewProvider {
     static var previews: some View {
         ActivityListView()
     }
+}
+
+enum DayOfWeek: String, CaseIterable {
+    static var allCases: [DayOfWeek] {
+        return [.monday, .tuesday, .wednesday, .tuesday, .friday, .saturday, .sunday]
+    }
+    
+    case monday = "Monday",
+         tuesday = "Tuesday",
+         wednesday = "Wednesday",
+         thusday = "Thusday",
+         friday = "Friday",
+         saturday = "Saturday",
+         sunday = "Sunday"
+    case none
+    
 }

@@ -75,7 +75,7 @@ struct ExerciseView: View {
         }
         .padding(.vertical, 8)
         .frame(maxWidth: .infinity)
-        .background(addedInActivityProgram ?
+        .background(exercise.containedIn(addNewActivityViewModel.finalActivityProgram) ?
                     RoundedRectangle(cornerRadius: 5)
                         .stroke(Color.green, lineWidth: 1) :
                         RoundedRectangle(cornerRadius: 5)

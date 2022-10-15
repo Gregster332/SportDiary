@@ -1,8 +1,17 @@
 import Foundation
+import RealmSwift
 
 class ActivityListViewModel: ObservableObject {
     
-    let dayOfWeeks: [String] = ["Monday", "Tuesday", "Wednesday", "Thusday", "Friday", "Saturday", "Sunday"]
+    let dayOfWeeks: DayOfWeek = .monday
     @Published var openAddNewActivityView: Bool = false
+    @Published var exercisesPrograms: [ExerciseProgram] = []
+    
+    @Inject private var realmManager: RealMManager
+    
+    func getAllExercisesPrograms() {
+        exercisesPrograms = Array(realmManager.getAllExercises())
+        print(exercisesPrograms)
+    }
     
 }

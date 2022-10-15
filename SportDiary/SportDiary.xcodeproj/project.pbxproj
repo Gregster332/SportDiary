@@ -11,6 +11,15 @@
 		D042311528F59F7100FF1D89 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042311428F59F7100FF1D89 /* NetworkManager.swift */; };
 		D042311728F5A36300FF1D89 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042311628F5A36300FF1D89 /* GifView.swift */; };
 		D09DC07328F85A78007DDACC /* ChooseDayOfActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */; };
+		D09DC07528F88D75007DDACC /* ConfirmActivityProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07428F88D75007DDACC /* ConfirmActivityProgram.swift */; };
+		D09DC07728F9CF21007DDACC /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07628F9CF21007DDACC /* MainScreenViewModel.swift */; };
+		D09DC07928F9D149007DDACC /* AddNewActivityPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07828F9D149007DDACC /* AddNewActivityPageView.swift */; };
+		D09DC07C28F9D83D007DDACC /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07B28F9D83D007DDACC /* View+Extension.swift */; };
+		D09DC07E28F9D854007DDACC /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07D28F9D854007DDACC /* PageView.swift */; };
+		D09DC08028F9D9B9007DDACC /* RealMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07F28F9D9B9007DDACC /* RealMManager.swift */; };
+		D09DC08328F9D9D5007DDACC /* RealMManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC08228F9D9D5007DDACC /* RealMManagerImpl.swift */; };
+		D09DC09828F9E8C0007DDACC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = D09DC09728F9E8C0007DDACC /* Realm */; };
+		D09DC09A28F9E8C0007DDACC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D09DC09928F9E8C0007DDACC /* RealmSwift */; };
 		D0B78B4028F05DC1006F07A1 /* SportDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */; };
 		D0B78B4228F05DC1006F07A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B4128F05DC1006F07A1 /* ContentView.swift */; };
 		D0B78B4428F05DC2006F07A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B78B4328F05DC2006F07A1 /* Assets.xcassets */; };
@@ -37,6 +46,13 @@
 		D042311428F59F7100FF1D89 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D042311628F5A36300FF1D89 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDayOfActivityView.swift; sourceTree = "<group>"; };
+		D09DC07428F88D75007DDACC /* ConfirmActivityProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmActivityProgram.swift; sourceTree = "<group>"; };
+		D09DC07628F9CF21007DDACC /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		D09DC07828F9D149007DDACC /* AddNewActivityPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityPageView.swift; sourceTree = "<group>"; };
+		D09DC07B28F9D83D007DDACC /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		D09DC07D28F9D854007DDACC /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		D09DC07F28F9D9B9007DDACC /* RealMManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealMManager.swift; sourceTree = "<group>"; };
+		D09DC08228F9D9D5007DDACC /* RealMManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealMManagerImpl.swift; sourceTree = "<group>"; };
 		D0B78B3C28F05DC1006F07A1 /* SportDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDiaryApp.swift; sourceTree = "<group>"; };
 		D0B78B4128F05DC1006F07A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09DC09A28F9E8C0007DDACC /* RealmSwift in Frameworks */,
+				D09DC09828F9E8C0007DDACC /* Realm in Frameworks */,
 				D0B78B8628F58D90006F07A1 /* Swinject in Frameworks */,
 				D042311028F59F2600FF1D89 /* FLAnimatedImage in Frameworks */,
 			);
@@ -95,8 +113,25 @@
 			isa = PBXGroup;
 			children = (
 				D042311428F59F7100FF1D89 /* NetworkManager.swift */,
+				D09DC07F28F9D9B9007DDACC /* RealMManager.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D09DC07A28F9D825007DDACC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D09DC07B28F9D83D007DDACC /* View+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D09DC08128F9D9C0007DDACC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D09DC08228F9D9D5007DDACC /* RealMManagerImpl.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		D0B78B3328F05DC1006F07A1 = {
@@ -161,6 +196,7 @@
 		D0B78B5628F3FC30006F07A1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D09DC07628F9CF21007DDACC /* MainScreenViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -214,6 +250,7 @@
 				D0B78B6D28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift */,
 				D0B78B5228F07B4D006F07A1 /* ExerciseView.swift */,
 				D042311628F5A36300FF1D89 /* GifView.swift */,
+				D09DC07D28F9D854007DDACC /* PageView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -250,6 +287,8 @@
 			children = (
 				D0B78B6B28F40816006F07A1 /* ChooseSetOfExercisesView.swift */,
 				D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */,
+				D09DC07428F88D75007DDACC /* ConfirmActivityProgram.swift */,
+				D09DC07828F9D149007DDACC /* AddNewActivityPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,6 +296,8 @@
 		D0B78B8728F58DB3006F07A1 /* HelpingUtils */ = {
 			isa = PBXGroup;
 			children = (
+				D09DC08128F9D9C0007DDACC /* CoreData */,
+				D09DC07A28F9D825007DDACC /* Extensions */,
 				D042311228F59F5000FF1D89 /* Networking */,
 				D042311128F59F4700FF1D89 /* DI */,
 			);
@@ -282,6 +323,8 @@
 			packageProductDependencies = (
 				D0B78B8528F58D90006F07A1 /* Swinject */,
 				D042310F28F59F2600FF1D89 /* FLAnimatedImage */,
+				D09DC09728F9E8C0007DDACC /* Realm */,
+				D09DC09928F9E8C0007DDACC /* RealmSwift */,
 			);
 			productName = SportDiary;
 			productReference = D0B78B3C28F05DC1006F07A1 /* SportDiary.app */;
@@ -314,6 +357,7 @@
 			packageReferences = (
 				D0B78B8428F58D90006F07A1 /* XCRemoteSwiftPackageReference "Swinject" */,
 				D042310E28F59F2600FF1D89 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
+				D09DC09628F9E8C0007DDACC /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = D0B78B3D28F05DC1006F07A1 /* Products */;
 			projectDirPath = "";
@@ -342,6 +386,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D042311528F59F7100FF1D89 /* NetworkManager.swift in Sources */,
+				D09DC08328F9D9D5007DDACC /* RealMManagerImpl.swift in Sources */,
+				D09DC07728F9CF21007DDACC /* MainScreenViewModel.swift in Sources */,
+				D09DC07928F9D149007DDACC /* AddNewActivityPageView.swift in Sources */,
 				D0B78B8928F58DDC006F07A1 /* Resolver.swift in Sources */,
 				D0B78B5328F07B4D006F07A1 /* ExerciseView.swift in Sources */,
 				D0B78B6628F4049E006F07A1 /* ActivityListRow.swift in Sources */,
@@ -349,14 +396,18 @@
 				D0B78B6128F401D3006F07A1 /* ActivityListViewModel.swift in Sources */,
 				D0B78B7028F41551006F07A1 /* AddNewActivityViewModel.swift in Sources */,
 				D0B78B8B28F58E23006F07A1 /* DependencyContainer.swift in Sources */,
+				D09DC07C28F9D83D007DDACC /* View+Extension.swift in Sources */,
 				D0B78B7428F421B3006F07A1 /* Exercise.swift in Sources */,
 				D0B78B6C28F40816006F07A1 /* ChooseSetOfExercisesView.swift in Sources */,
 				D0B78B4228F05DC1006F07A1 /* ContentView.swift in Sources */,
 				D0B78B8D28F58EE8006F07A1 /* InjectPropertyWrapper.swift in Sources */,
 				D0B78B5928F3FC4B006F07A1 /* MainScreen.swift in Sources */,
+				D09DC07528F88D75007DDACC /* ConfirmActivityProgram.swift in Sources */,
 				D09DC07328F85A78007DDACC /* ChooseDayOfActivityView.swift in Sources */,
 				D0B78B4E28F05DF9006F07A1 /* NetworkManagerImpl.swift in Sources */,
 				D0B78B6E28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift in Sources */,
+				D09DC08028F9D9B9007DDACC /* RealMManager.swift in Sources */,
+				D09DC07E28F9D854007DDACC /* PageView.swift in Sources */,
 				D0B78B4028F05DC1006F07A1 /* SportDiaryApp.swift in Sources */,
 				D0B78B7228F42134006F07A1 /* AddNewActivityViewState.swift in Sources */,
 				D042311728F5A36300FF1D89 /* GifView.swift in Sources */,
@@ -575,6 +626,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		D09DC09628F9E8C0007DDACC /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.32.0;
+			};
+		};
 		D0B78B8428F58D90006F07A1 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -590,6 +649,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D042310E28F59F2600FF1D89 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
 			productName = FLAnimatedImage;
+		};
+		D09DC09728F9E8C0007DDACC /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D09DC09628F9E8C0007DDACC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		D09DC09928F9E8C0007DDACC /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D09DC09628F9E8C0007DDACC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		D0B78B8528F58D90006F07A1 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;

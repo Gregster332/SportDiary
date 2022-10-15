@@ -8,19 +8,45 @@
 import SwiftUI
 
 struct MainScreen: View {
+    
+    @State private var selection = ""
+    @StateObject var mainScreenViewModel: MainScreenViewModel = MainScreenViewModel()
+    
     var body: some View {
-        TabView {
+        NavigationView {
+            TabView {
+                
+                ActivityListView()
+                    .tabItem {
+                        Label("Activities", systemImage: "gear")
+                    }
+                    .onAppear {
+                        selection = "Activities"
+                    }
+                
+                Text("Hi")
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+                    .onAppear {
+                        selection = "Settings"
+                    }
+                
+            }
             
-            ActivityListView()
-                .tabItem {
-                    Label("Activities", systemImage: "gear")
+            .navigationBarTitle(selection)
+            .toolbar {
+                Button {
+                    mainScreenViewModel.addNewActivityProgramIsOpen = true
+                } label: {
+                    Image(systemName: "plus")
+                        .foregroundColor(Color("navBarColor"))
                 }
-            
-            Text("Hi")
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }
-            
+
+            }
+            .fullScreenCover(isPresented: $mainScreenViewModel.addNewActivityProgramIsOpen) {
+                AddNewActivityPageView()
+            }
         }
     }
 }

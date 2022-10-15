@@ -1,16 +1,10 @@
-//
-//  ChooseDayOfActivity.swift
-//  SportDiary
-//
-//  Created by Grigory Zenkov on 13.10.2022.
-//
-
 import SwiftUI
 
 struct ChooseDayOfActivityView: View {
     
-    @StateObject var addNewActivityViewModel: AddNewActivityViewModel = AddNewActivityViewModel()
+    @EnvironmentObject var addNewActivityViewModel: AddNewActivityViewModel
     @Environment(\.presentationMode) var presentationMode
+    @Binding var selectedTab: Int
     
     var body: some View {
         VStack {
@@ -21,10 +15,10 @@ struct ChooseDayOfActivityView: View {
             
             AddNewActivityDaySelectionSection()
             
-            if !addNewActivityViewModel.selectedDay.isEmpty {
-                NavigationLink {
-                    ChooseSetOfExercisesView()
-                        
+            if addNewActivityViewModel.selectedDay != .none {
+                Button {
+                    selectedTab += 1
+                    print(selectedTab)
                 } label: {
                     Text("Next")
                         .foregroundColor(.black)
@@ -40,15 +34,18 @@ struct ChooseDayOfActivityView: View {
             
             Spacer()
         }
-        .environmentObject(addNewActivityViewModel)
         
         .navigationBarHidden(true)
     }
 }
 
 struct ChooseDayOfActivity_Previews: PreviewProvider {
+    
+    static let viewModel = AddNewActivityViewModel()
+    
     static var previews: some View {
-        ChooseDayOfActivityView()
+        ChooseDayOfActivityView(selectedTab: .constant(1))
+            .environmentObject(viewModel)
     }
 }
 

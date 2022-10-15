@@ -12,8 +12,6 @@ struct AddNewActivityDaySelectionSection: View {
     @EnvironmentObject var viewModel: AddNewActivityViewModel
     @State private var toggleDropdownList = false
     
-    private let dayOfWeeks: [String] = ["Monday", "Tuesday", "Wednesday", "Thusday", "Friday", "Saturday", "Sunday"]
-    
     var body: some View {
         VStack(alignment: .center, spacing: 16) {
             
@@ -21,7 +19,7 @@ struct AddNewActivityDaySelectionSection: View {
                 toggleDropdownList.toggle()
             } label: {
                 HStack {
-                    Text(viewModel.selectedDay.isEmpty ? "Choose the day for new activity" : viewModel.selectedDay)
+                    Text(viewModel.selectedDay == .none ? "Choose the day for new activity" : viewModel.selectedDay.rawValue)
                         .font(.system(size: 14))
                         .foregroundColor(Color.black)
                     
@@ -35,7 +33,8 @@ struct AddNewActivityDaySelectionSection: View {
                 }
                 .padding(.horizontal)
                 .cornerRadius(5)
-                .frame(width: .infinity, height: 40)
+                .frame(maxWidth: .infinity)
+                .frame(height: 40)
                 .overlay(
                     RoundedRectangle(cornerRadius: 5)
                         .stroke(Color.gray, lineWidth: 1)
@@ -46,12 +45,12 @@ struct AddNewActivityDaySelectionSection: View {
             if toggleDropdownList {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(alignment: .leading) {
-                        ForEach(dayOfWeeks, id: \.self) { day in
+                        ForEach(DayOfWeek.allCases, id: \.self) { day in
                             Button {
                                 viewModel.selectedDay = day
                                 toggleDropdownList.toggle()
                             } label: {
-                                Text(day)
+                                Text(day.rawValue)
                                     .foregroundColor(.black)
                                     .padding(3)
                             }

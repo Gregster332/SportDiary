@@ -1,35 +1,51 @@
-//
-//  AddNewActivityView.swift
-//  SportDiary
-//
-//  Created by Grigory Zenkov on 10.10.2022.
-//
-
 import SwiftUI
 
 struct ChooseSetOfExercisesView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    @StateObject var addNewActivityViewModel: AddNewActivityViewModel = AddNewActivityViewModel()
+    @EnvironmentObject var addNewActivityViewModel: AddNewActivityViewModel
+    @State private var searchedText: String = ""
+    @Binding var selectedTab: Int
+    
+    var serchedResults: [Exercise] {
+        if searchedText.isEmpty {
+            return addNewActivityViewModel.fetchedExercises
+        } else {
+            return addNewActivityViewModel.fetchedExercises
+                .filter({$0.name.contains(searchedText)})
+        }
+    }
     
     var body: some View {
         ZStack {
-            switch addNewActivityViewModel.addNewActivityViewState {
-            case .notStartedAnyTask, .loading:
-                ProgressView().progressViewStyle(.circular)
-            case .failure(let error):
+            if let error = addNewActivityViewModel.isError {
                 Text("Some error here: \(error.localizedDescription)")
-            case .success(let exercises):
+            } else if addNewActivityViewModel.isLoading {
+                ProgressView().progressViewStyle(.circular)
+            } else if !addNewActivityViewModel.fetchedExercises.isEmpty {
                 ZStack(alignment: .bottom) {
                     VStack {
                         CustomNavigationBar(headerText: Text("Choose exercises"), rightButtonTextStyle: nil) {
-                            presentationMode.wrappedValue.dismiss()
+                            selectedTab -= 1
                         }
                         .background(Color("navBarColor"))
                         
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                                .font(.title3)
+                            TextField("Search...", text: $searchedText)
+                                .textInputAutocapitalization(.never)
+                        }
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 5)
+                                .stroke(Color("navBarColor"), lineWidth: 1)
+                        )
+                        .padding(.horizontal, 8)
+                        
                         ScrollView {
                             VStack(spacing: 16) {
-                                ForEach(exercises) { exercise in
+                                ForEach(serchedResults) { exercise in
                                     ExerciseView(
                                         exercise: exercise
                                     )
@@ -40,16 +56,23 @@ struct ChooseSetOfExercisesView: View {
                     }
                     
                     Button {
-                        //
+                        selectedTab += 1
                     } label: {
-                        Rectangle()
+                        Text("Next")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, maxHeight: 40)
+                            .background(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .fill(.black)
+                            )
+                            .padding(.horizontal)
                     }
-
                 }
-                .task {
-                    try? await addNewActivityViewModel.getListOfAllExercises()
-                }
-                .environmentObject(addNewActivityViewModel)
+            }
+        }
+        .task {
+            if addNewActivityViewModel.isLoadingNeeded {
+                try? await addNewActivityViewModel.getListOfAllExercises()
             }
         }
         
@@ -58,7 +81,21 @@ struct ChooseSetOfExercisesView: View {
 }
 
 struct AddNewActivityView_Previews: PreviewProvider {
+    static let viewModel = AddNewActivityViewModel()
     static var previews: some View {
-        ChooseSetOfExercisesView()
+        ChooseSetOfExercisesView(selectedTab: .constant(1))
+            .environmentObject(viewModel)
+    }
+}
+
+extension Exercise {
+    func containedIn(_ array: Array<Self>) -> Bool {
+        var isContained = false
+        for exercise in array {
+            if self.id == exercise.id {
+                isContained = true
+            }
+        }
+        return isContained
     }
 }
