@@ -1,29 +1,38 @@
 import Foundation
 
-
 class AddNewActivityViewModel: ObservableObject {
     
-    @Published var addNewActivityViewState: AddNewActivityViewState = .notStartedAnyTask
-    @Published var selectedDay: String = ""
-    @Published var openForMoreInformation: Bool = false
+    @Published var isLoading: Bool = false
+    @Published var isLoadingNeeded: Bool = true
+    @Published var isError: Error? = nil
+    @Published var fetchedExercises: [Exercise] = []
+    @Published var selectedDay: DayOfWeek = .none
+    @Published var finalActivityProgram: [Exercise] = []
     
     @Inject private var networkManager: NetworkManger
+    @Inject private var realmManager: RealMManager
     
     func getListOfAllExercises() async throws {
-        addNewActivityViewState = .loading
+        isLoading = true
         await networkManager.getAllExercises { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let exercises):
                 DispatchQueue.main.async {
-                    self.addNewActivityViewState = .success(exercises)
+                    self.fetchedExercises = exercises
+                    self.isLoadingNeeded = false
+                    self.isLoading = false
                 }
             case .failure(let error):
                 DispatchQueue.main.async {
-                    self.addNewActivityViewState = .failure(error)
+                    self.isError = error
+                    self.isLoading = false
                 }
             }
         }
     }
     
+    func saveNewProgram(program: ExerciseProgram) {
+        realmManager.saveActivityProgram(program)
+    }
 }

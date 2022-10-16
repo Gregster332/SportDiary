@@ -7,7 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C6CA3737887CA436E58F65C /* Pods_SportDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8D6D8F340116FBC9969378 /* Pods_SportDiary.framework */; };
+		D042311028F59F2600FF1D89 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = D042310F28F59F2600FF1D89 /* FLAnimatedImage */; };
+		D042311528F59F7100FF1D89 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042311428F59F7100FF1D89 /* NetworkManager.swift */; };
+		D042311728F5A36300FF1D89 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042311628F5A36300FF1D89 /* GifView.swift */; };
+		D09DC07328F85A78007DDACC /* ChooseDayOfActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */; };
+		D09DC07528F88D75007DDACC /* ConfirmActivityProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07428F88D75007DDACC /* ConfirmActivityProgram.swift */; };
+		D09DC07728F9CF21007DDACC /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07628F9CF21007DDACC /* MainScreenViewModel.swift */; };
+		D09DC07928F9D149007DDACC /* AddNewActivityPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07828F9D149007DDACC /* AddNewActivityPageView.swift */; };
+		D09DC07C28F9D83D007DDACC /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07B28F9D83D007DDACC /* View+Extension.swift */; };
+		D09DC07E28F9D854007DDACC /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07D28F9D854007DDACC /* PageView.swift */; };
+		D09DC08028F9D9B9007DDACC /* RealMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07F28F9D9B9007DDACC /* RealMManager.swift */; };
+		D09DC08328F9D9D5007DDACC /* RealMManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC08228F9D9D5007DDACC /* RealMManagerImpl.swift */; };
+		D09DC09828F9E8C0007DDACC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = D09DC09728F9E8C0007DDACC /* Realm */; };
+		D09DC09A28F9E8C0007DDACC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D09DC09928F9E8C0007DDACC /* RealmSwift */; };
+		D09DC09E28FAF854007DDACC /* ExercisesProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC09D28FAF854007DDACC /* ExercisesProgram.swift */; };
+		D09DC0A028FAF87D007DDACC /* ExerciseForDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC09F28FAF87D007DDACC /* ExerciseForDB.swift */; };
+		D09DC0A228FAF8E0007DDACC /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0A128FAF8E0007DDACC /* Array+Extension.swift */; };
+		D09DC0A428FAF9AC007DDACC /* Exercise+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0A328FAF9AC007DDACC /* Exercise+Extension.swift */; };
+		D09DC0A828FBFB1D007DDACC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09DC0A728FBFB1D007DDACC /* HealthKit.framework */; };
+		D09DC0AA28FBFBC4007DDACC /* HealthKitAssistantImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0A928FBFBC4007DDACC /* HealthKitAssistantImpl.swift */; };
+		D09DC0AD28FBFF4E007DDACC /* UserHeathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0AC28FBFF4E007DDACC /* UserHeathView.swift */; };
+		D09DC0AF28FBFF76007DDACC /* HealthKitAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0AE28FBFF76007DDACC /* HealthKitAssistant.swift */; };
 		D0B78B4028F05DC1006F07A1 /* SportDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */; };
 		D0B78B4228F05DC1006F07A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B4128F05DC1006F07A1 /* ContentView.swift */; };
 		D0B78B4428F05DC2006F07A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B78B4328F05DC2006F07A1 /* Assets.xcassets */; };
@@ -19,10 +39,9 @@
 		D0B78B6128F401D3006F07A1 /* ActivityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6028F401D3006F07A1 /* ActivityListViewModel.swift */; };
 		D0B78B6428F40469006F07A1 /* ActivityListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6328F40469006F07A1 /* ActivityListRowView.swift */; };
 		D0B78B6628F4049E006F07A1 /* ActivityListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6528F4049E006F07A1 /* ActivityListRow.swift */; };
-		D0B78B6C28F40816006F07A1 /* AddNewActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6B28F40816006F07A1 /* AddNewActivityView.swift */; };
+		D0B78B6C28F40816006F07A1 /* ChooseSetOfExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6B28F40816006F07A1 /* ChooseSetOfExercisesView.swift */; };
 		D0B78B6E28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6D28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift */; };
 		D0B78B7028F41551006F07A1 /* AddNewActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B6F28F41551006F07A1 /* AddNewActivityViewModel.swift */; };
-		D0B78B7228F42134006F07A1 /* AddNewActivityViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B7128F42134006F07A1 /* AddNewActivityViewState.swift */; };
 		D0B78B7428F421B3006F07A1 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B7328F421B3006F07A1 /* Exercise.swift */; };
 		D0B78B8628F58D90006F07A1 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D0B78B8528F58D90006F07A1 /* Swinject */; };
 		D0B78B8928F58DDC006F07A1 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B8828F58DDC006F07A1 /* Resolver.swift */; };
@@ -31,8 +50,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D8D6D8F340116FBC9969378 /* Pods_SportDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C28F1E42C3D87DC88213D9E0 /* Pods-SportDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportDiary.debug.xcconfig"; path = "Target Support Files/Pods-SportDiary/Pods-SportDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		D042311428F59F7100FF1D89 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D042311628F5A36300FF1D89 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
+		D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDayOfActivityView.swift; sourceTree = "<group>"; };
+		D09DC07428F88D75007DDACC /* ConfirmActivityProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmActivityProgram.swift; sourceTree = "<group>"; };
+		D09DC07628F9CF21007DDACC /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		D09DC07828F9D149007DDACC /* AddNewActivityPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityPageView.swift; sourceTree = "<group>"; };
+		D09DC07B28F9D83D007DDACC /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		D09DC07D28F9D854007DDACC /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		D09DC07F28F9D9B9007DDACC /* RealMManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealMManager.swift; sourceTree = "<group>"; };
+		D09DC08228F9D9D5007DDACC /* RealMManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealMManagerImpl.swift; sourceTree = "<group>"; };
+		D09DC09D28FAF854007DDACC /* ExercisesProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesProgram.swift; sourceTree = "<group>"; };
+		D09DC09F28FAF87D007DDACC /* ExerciseForDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseForDB.swift; sourceTree = "<group>"; };
+		D09DC0A128FAF8E0007DDACC /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		D09DC0A328FAF9AC007DDACC /* Exercise+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+Extension.swift"; sourceTree = "<group>"; };
+		D09DC0A528FBFB1D007DDACC /* SportDiary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SportDiary.entitlements; sourceTree = "<group>"; };
+		D09DC0A728FBFB1D007DDACC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		D09DC0A928FBFBC4007DDACC /* HealthKitAssistantImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAssistantImpl.swift; sourceTree = "<group>"; };
+		D09DC0AC28FBFF4E007DDACC /* UserHeathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeathView.swift; sourceTree = "<group>"; };
+		D09DC0AE28FBFF76007DDACC /* HealthKitAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAssistant.swift; sourceTree = "<group>"; };
 		D0B78B3C28F05DC1006F07A1 /* SportDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDiaryApp.swift; sourceTree = "<group>"; };
 		D0B78B4128F05DC1006F07A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,15 +82,13 @@
 		D0B78B6028F401D3006F07A1 /* ActivityListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListViewModel.swift; sourceTree = "<group>"; };
 		D0B78B6328F40469006F07A1 /* ActivityListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListRowView.swift; sourceTree = "<group>"; };
 		D0B78B6528F4049E006F07A1 /* ActivityListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListRow.swift; sourceTree = "<group>"; };
-		D0B78B6B28F40816006F07A1 /* AddNewActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityView.swift; sourceTree = "<group>"; };
+		D0B78B6B28F40816006F07A1 /* ChooseSetOfExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSetOfExercisesView.swift; sourceTree = "<group>"; };
 		D0B78B6D28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityDaySelectionSection.swift; sourceTree = "<group>"; };
 		D0B78B6F28F41551006F07A1 /* AddNewActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityViewModel.swift; sourceTree = "<group>"; };
-		D0B78B7128F42134006F07A1 /* AddNewActivityViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityViewState.swift; sourceTree = "<group>"; };
 		D0B78B7328F421B3006F07A1 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		D0B78B8828F58DDC006F07A1 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 		D0B78B8A28F58E23006F07A1 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		D0B78B8C28F58EE8006F07A1 /* InjectPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectPropertyWrapper.swift; sourceTree = "<group>"; };
-		F207B4E6077DBA896E5C4E9A /* Pods-SportDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportDiary.release.xcconfig"; path = "Target Support Files/Pods-SportDiary/Pods-SportDiary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,20 +96,77 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C6CA3737887CA436E58F65C /* Pods_SportDiary.framework in Frameworks */,
+				D09DC09A28F9E8C0007DDACC /* RealmSwift in Frameworks */,
+				D09DC09828F9E8C0007DDACC /* Realm in Frameworks */,
 				D0B78B8628F58D90006F07A1 /* Swinject in Frameworks */,
+				D042311028F59F2600FF1D89 /* FLAnimatedImage in Frameworks */,
+				D09DC0A828FBFB1D007DDACC /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04E82BC28692D3E530D06746 /* Frameworks */ = {
+		D042311128F59F4700FF1D89 /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				2D8D6D8F340116FBC9969378 /* Pods_SportDiary.framework */,
+				D0B78B8828F58DDC006F07A1 /* Resolver.swift */,
+				D0B78B8A28F58E23006F07A1 /* DependencyContainer.swift */,
+				D0B78B8C28F58EE8006F07A1 /* InjectPropertyWrapper.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		D042311228F59F5000FF1D89 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D0B78B4D28F05DF9006F07A1 /* NetworkManagerImpl.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D042311328F59F5C00FF1D89 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D042311428F59F7100FF1D89 /* NetworkManager.swift */,
+				D09DC07F28F9D9B9007DDACC /* RealMManager.swift */,
+				D09DC0AE28FBFF76007DDACC /* HealthKitAssistant.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D09DC07A28F9D825007DDACC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D09DC07B28F9D83D007DDACC /* View+Extension.swift */,
+				D09DC0A128FAF8E0007DDACC /* Array+Extension.swift */,
+				D09DC0A328FAF9AC007DDACC /* Exercise+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D09DC08128F9D9C0007DDACC /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				D09DC08228F9D9D5007DDACC /* RealMManagerImpl.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		D09DC0A628FBFB1D007DDACC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D09DC0A728FBFB1D007DDACC /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D09DC0AB28FBFF20007DDACC /* UserHealth */ = {
+			isa = PBXGroup;
+			children = (
+				D09DC0AC28FBFF4E007DDACC /* UserHeathView.swift */,
+			);
+			path = UserHealth;
 			sourceTree = "<group>";
 		};
 		D0B78B3328F05DC1006F07A1 = {
@@ -83,8 +174,7 @@
 			children = (
 				D0B78B3E28F05DC1006F07A1 /* SportDiary */,
 				D0B78B3D28F05DC1006F07A1 /* Products */,
-				FB9A171AFE8F7CFE961FA2EC /* Pods */,
-				04E82BC28692D3E530D06746 /* Frameworks */,
+				D09DC0A628FBFB1D007DDACC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,14 +189,16 @@
 		D0B78B3E28F05DC1006F07A1 /* SportDiary */ = {
 			isa = PBXGroup;
 			children = (
+				D09DC0A528FBFB1D007DDACC /* SportDiary.entitlements */,
 				D0B78B5128F06896006F07A1 /* Info.plist */,
 				D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */,
+				D042311328F59F5C00FF1D89 /* Protocols */,
 				D0B78B8728F58DB3006F07A1 /* HelpingUtils */,
 				D0B78B6228F40442006F07A1 /* UIComponents */,
 				D0B78B5428F3FC18006F07A1 /* Main */,
 				D0B78B5A28F40053006F07A1 /* ActivityList */,
+				D09DC0AB28FBFF20007DDACC /* UserHealth */,
 				D0B78B6728F407D2006F07A1 /* AddNewActivity */,
-				D0B78B4D28F05DF9006F07A1 /* NetworkManagerImpl.swift */,
 				D0B78B4328F05DC2006F07A1 /* Assets.xcassets */,
 				D0B78B4528F05DC2006F07A1 /* Preview Content */,
 			);
@@ -142,6 +234,7 @@
 		D0B78B5628F3FC30006F07A1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D09DC07628F9CF21007DDACC /* MainScreenViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -168,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				D0B78B6528F4049E006F07A1 /* ActivityListRow.swift */,
+				D09DC09D28FAF854007DDACC /* ExercisesProgram.swift */,
+				D09DC09F28FAF87D007DDACC /* ExerciseForDB.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +289,8 @@
 				D0B78B6328F40469006F07A1 /* ActivityListRowView.swift */,
 				D0B78B6D28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift */,
 				D0B78B5228F07B4D006F07A1 /* ExerciseView.swift */,
+				D042311628F5A36300FF1D89 /* GifView.swift */,
+				D09DC07D28F9D854007DDACC /* PageView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -211,7 +308,6 @@
 		D0B78B6828F407EE006F07A1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D0B78B7128F42134006F07A1 /* AddNewActivityViewState.swift */,
 				D0B78B7328F421B3006F07A1 /* Exercise.swift */,
 			);
 			path = Model;
@@ -228,7 +324,10 @@
 		D0B78B6A28F40804006F07A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D0B78B6B28F40816006F07A1 /* AddNewActivityView.swift */,
+				D0B78B6B28F40816006F07A1 /* ChooseSetOfExercisesView.swift */,
+				D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */,
+				D09DC07428F88D75007DDACC /* ConfirmActivityProgram.swift */,
+				D09DC07828F9D149007DDACC /* AddNewActivityPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,20 +335,13 @@
 		D0B78B8728F58DB3006F07A1 /* HelpingUtils */ = {
 			isa = PBXGroup;
 			children = (
-				D0B78B8828F58DDC006F07A1 /* Resolver.swift */,
-				D0B78B8A28F58E23006F07A1 /* DependencyContainer.swift */,
-				D0B78B8C28F58EE8006F07A1 /* InjectPropertyWrapper.swift */,
+				D09DC0A928FBFBC4007DDACC /* HealthKitAssistantImpl.swift */,
+				D09DC08128F9D9C0007DDACC /* DB */,
+				D09DC07A28F9D825007DDACC /* Extensions */,
+				D042311228F59F5000FF1D89 /* Networking */,
+				D042311128F59F4700FF1D89 /* DI */,
 			);
 			path = HelpingUtils;
-			sourceTree = "<group>";
-		};
-		FB9A171AFE8F7CFE961FA2EC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C28F1E42C3D87DC88213D9E0 /* Pods-SportDiary.debug.xcconfig */,
-				F207B4E6077DBA896E5C4E9A /* Pods-SportDiary.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +351,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0B78B4A28F05DC2006F07A1 /* Build configuration list for PBXNativeTarget "SportDiary" */;
 			buildPhases = (
-				BDFCB5B1E2890745D042C12B /* [CP] Check Pods Manifest.lock */,
 				D0B78B3828F05DC1006F07A1 /* Sources */,
 				D0B78B3928F05DC1006F07A1 /* Frameworks */,
 				D0B78B3A28F05DC1006F07A1 /* Resources */,
@@ -271,6 +362,9 @@
 			name = SportDiary;
 			packageProductDependencies = (
 				D0B78B8528F58D90006F07A1 /* Swinject */,
+				D042310F28F59F2600FF1D89 /* FLAnimatedImage */,
+				D09DC09728F9E8C0007DDACC /* Realm */,
+				D09DC09928F9E8C0007DDACC /* RealmSwift */,
 			);
 			productName = SportDiary;
 			productReference = D0B78B3C28F05DC1006F07A1 /* SportDiary.app */;
@@ -302,6 +396,8 @@
 			mainGroup = D0B78B3328F05DC1006F07A1;
 			packageReferences = (
 				D0B78B8428F58D90006F07A1 /* XCRemoteSwiftPackageReference "Swinject" */,
+				D042310E28F59F2600FF1D89 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
+				D09DC09628F9E8C0007DDACC /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = D0B78B3D28F05DC1006F07A1 /* Products */;
 			projectDirPath = "";
@@ -324,52 +420,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BDFCB5B1E2890745D042C12B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SportDiary-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		D0B78B3828F05DC1006F07A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D042311528F59F7100FF1D89 /* NetworkManager.swift in Sources */,
+				D09DC0AA28FBFBC4007DDACC /* HealthKitAssistantImpl.swift in Sources */,
+				D09DC08328F9D9D5007DDACC /* RealMManagerImpl.swift in Sources */,
+				D09DC0A028FAF87D007DDACC /* ExerciseForDB.swift in Sources */,
+				D09DC07728F9CF21007DDACC /* MainScreenViewModel.swift in Sources */,
+				D09DC07928F9D149007DDACC /* AddNewActivityPageView.swift in Sources */,
 				D0B78B8928F58DDC006F07A1 /* Resolver.swift in Sources */,
 				D0B78B5328F07B4D006F07A1 /* ExerciseView.swift in Sources */,
 				D0B78B6628F4049E006F07A1 /* ActivityListRow.swift in Sources */,
 				D0B78B6428F40469006F07A1 /* ActivityListRowView.swift in Sources */,
+				D09DC09E28FAF854007DDACC /* ExercisesProgram.swift in Sources */,
 				D0B78B6128F401D3006F07A1 /* ActivityListViewModel.swift in Sources */,
 				D0B78B7028F41551006F07A1 /* AddNewActivityViewModel.swift in Sources */,
 				D0B78B8B28F58E23006F07A1 /* DependencyContainer.swift in Sources */,
+				D09DC07C28F9D83D007DDACC /* View+Extension.swift in Sources */,
 				D0B78B7428F421B3006F07A1 /* Exercise.swift in Sources */,
-				D0B78B6C28F40816006F07A1 /* AddNewActivityView.swift in Sources */,
+				D0B78B6C28F40816006F07A1 /* ChooseSetOfExercisesView.swift in Sources */,
+				D09DC0AF28FBFF76007DDACC /* HealthKitAssistant.swift in Sources */,
 				D0B78B4228F05DC1006F07A1 /* ContentView.swift in Sources */,
+				D09DC0AD28FBFF4E007DDACC /* UserHeathView.swift in Sources */,
 				D0B78B8D28F58EE8006F07A1 /* InjectPropertyWrapper.swift in Sources */,
 				D0B78B5928F3FC4B006F07A1 /* MainScreen.swift in Sources */,
+				D09DC07528F88D75007DDACC /* ConfirmActivityProgram.swift in Sources */,
+				D09DC07328F85A78007DDACC /* ChooseDayOfActivityView.swift in Sources */,
+				D09DC0A228FAF8E0007DDACC /* Array+Extension.swift in Sources */,
 				D0B78B4E28F05DF9006F07A1 /* NetworkManagerImpl.swift in Sources */,
 				D0B78B6E28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift in Sources */,
+				D09DC08028F9D9B9007DDACC /* RealMManager.swift in Sources */,
+				D09DC07E28F9D854007DDACC /* PageView.swift in Sources */,
 				D0B78B4028F05DC1006F07A1 /* SportDiaryApp.swift in Sources */,
-				D0B78B7228F42134006F07A1 /* AddNewActivityViewState.swift in Sources */,
+				D042311728F5A36300FF1D89 /* GifView.swift in Sources */,
+				D09DC0A428FAF9AC007DDACC /* Exercise+Extension.swift in Sources */,
 				D0B78B5F28F40099006F07A1 /* ActivityListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,10 +580,10 @@
 		};
 		D0B78B4B28F05DC2006F07A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C28F1E42C3D87DC88213D9E0 /* Pods-SportDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SportDiary/SportDiary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SportDiary/Preview Content\"";
@@ -504,12 +591,15 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportDiary/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires health data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -525,10 +615,10 @@
 		};
 		D0B78B4C28F05DC2006F07A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F207B4E6077DBA896E5C4E9A /* Pods-SportDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SportDiary/SportDiary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SportDiary/Preview Content\"";
@@ -536,12 +626,15 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportDiary/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires health data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -579,6 +672,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D042310E28F59F2600FF1D89 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		D09DC09628F9E8C0007DDACC /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.32.0;
+			};
+		};
 		D0B78B8428F58D90006F07A1 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -590,6 +699,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D042310F28F59F2600FF1D89 /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D042310E28F59F2600FF1D89 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
+		D09DC09728F9E8C0007DDACC /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D09DC09628F9E8C0007DDACC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		D09DC09928F9E8C0007DDACC /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D09DC09628F9E8C0007DDACC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		D0B78B8528F58D90006F07A1 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D0B78B8428F58D90006F07A1 /* XCRemoteSwiftPackageReference "Swinject" */;

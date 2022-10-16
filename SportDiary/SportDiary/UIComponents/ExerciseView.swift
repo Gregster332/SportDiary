@@ -1,17 +1,14 @@
-//
-//  ExerciseView.swift
-//  SportDiary
-//
-//  Created by Grigory Zenkov on 07.10.2022.
-//
-
 import SwiftUI
+import FLAnimatedImage
 
 struct ExerciseView: View {
 
     let exercise: Exercise
     @EnvironmentObject var addNewActivityViewModel: AddNewActivityViewModel
-
+    
+    @State private var openForMoreInformation: Bool = false
+    @State private var addedInActivityProgram: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading,spacing: 20) {
             HStack(alignment: .center, spacing: 20) {
@@ -35,20 +32,22 @@ struct ExerciseView: View {
                 
                 
                 Button {
-                    addNewActivityViewModel.openForMoreInformation.toggle()
+                    withAnimation(.easeInOut) {
+                        openForMoreInformation.toggle()
+                    }
                 } label: {
                     HStack {
-                        Text(addNewActivityViewModel.openForMoreInformation ? "Close" : "More information")
-                        Image(systemName: addNewActivityViewModel.openForMoreInformation ? "arrow.turn.right.up" : "arrow.turn.right.down")
+                        Text(openForMoreInformation ? "Close" : "More information")
+                        Image(systemName: openForMoreInformation ? "arrow.turn.right.up" : "arrow.turn.right.down")
                     }
-                    .foregroundColor(.indigo)
+                    .foregroundColor(Color("navBarColor"))
                 }
                 .padding(.trailing, 8)
             }
             
-            if !addNewActivityViewModel.openForMoreInformation {
-                HStack {
-                    VStack(alignment: .leading) {
+            if openForMoreInformation {
+                VStack(alignment: .center) {
+                    VStack(alignment: .center) {
                         Text("Body part: \(exercise.bodyPart)")
                             .fontWeight(.medium)
                         Text("Equipment: \(exercise.equipment)")
@@ -56,24 +55,43 @@ struct ExerciseView: View {
                     }
                     .font(.body)
                     
-                    
+                    if let url = URL(string: exercise.gifUrl) {
+                        GIFView(type: .url(url))
+                            .frame(width: 200, height: 200, alignment: .center)
+                    } else {
+                        Text("No gif")
+                    }
                     
                 }
+                .frame(maxWidth: .infinity)
                 .padding(.horizontal, 16)
             }
             
         }
         .padding(.vertical, 8)
         .frame(maxWidth: .infinity)
-        .background(Color.black.opacity(0.09))
-        .cornerRadius(10)
+        .background(exercise.containedIn(addNewActivityViewModel.finalActivityProgram) ?
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color.green, lineWidth: 1) :
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.gray, lineWidth: 1))
         .padding(.horizontal, 8)
+        .onTapGesture {
+            withAnimation(.easeInOut) {
+                if !addNewActivityViewModel.finalActivityProgram.contains(where: { exercise in
+                    self.exercise.id == exercise.id
+                }) {
+                    addedInActivityProgram = true
+                    addNewActivityViewModel.finalActivityProgram.append(self.exercise)
+                }
+            }
+        }
     }
 }
 
 struct ExerciseView_Previews: PreviewProvider {
     
-    static let envObject = AddNewActivityViewModel()
+    static let addNewActivityViewModel = AddNewActivityViewModel()
     
     static var previews: some View {
         ExerciseView(exercise: Exercise(
@@ -83,6 +101,7 @@ struct ExerciseView_Previews: PreviewProvider {
             id:"0001",
             name:"3/4 sit-up",
             target:"abs"
-        )).environmentObject(envObject)
+        ))
+        .environmentObject(addNewActivityViewModel)
     }
 }

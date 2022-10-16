@@ -1,11 +1,5 @@
-//
-//  ActivityListRow.swift
-//  SportDiary
-//
-//  Created by Grigory Zenkov on 10.10.2022.
-//
-
 import SwiftUI
+import RealmSwift
 
 struct ActivityListRowView: View {
     
@@ -14,32 +8,86 @@ struct ActivityListRowView: View {
     var body: some View {
         VStack {
             HStack {
-                Text(activityListRow.title)
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                
-                Spacer()
+                VStack {
+                    HStack {
+                        Text(activityListRow.name)
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                        
+                        Spacer()
+                    }
+                    .padding(.horizontal, 16)
+                    
+                    HStack {
+                        Text(activityListRow.dayOfWeek)
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                        
+                        Spacer()
+                    }
+                    .padding(.horizontal, 16)
+                }
             }
-            .padding(.horizontal, 16)
             
             Group {
-                if activityListRow.exercises == nil {
-                    Text("No active tasks for today")
+                if let exercises = activityListRow.exercises {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        ForEach(exercises, id: \.self) { exercise in
+                            HStack {
+                                VStack(alignment: .leading, spacing: 20) {
+                                    Text("Exercise name: \(exercise.name)")
+                                    Text("Target: \(exercise.target)")
+                                    Text("Body part: \(exercise.bodyPart)")
+                                    Text("Equipment: \(exercise.equipment)")
+                                }
+                                
+                                Spacer()
+                                
+                                GIFView(type: .url(URL(string: exercise.gifUrl)!))
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 150, height: 150, alignment: .center)
+                                
+                            }
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .stroke(Color("navBarColor"), lineWidth: 1)
+                            )
+                            .padding(.horizontal, 8)
+                        }
+                    }
                 } else {
-                    Text("Execrcises here")
+                    Text("No active tasks for today")
                 }
             }
             .padding(.vertical, 8)
         }
         .padding(.vertical, 8)
         .frame(maxWidth: .infinity)
-        .background(RoundedRectangle(cornerRadius: 10).fill(Color.blue.opacity(0.2)))
+        .overlay(
+            RoundedRectangle(cornerRadius: 5)
+                .stroke(.black, lineWidth: 2)
+        )
         .padding(.horizontal, 8)
     }
 }
 
 struct ActivityListRow_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityListRowView(activityListRow: ActivityListRow(title: "Monday", exercises: nil))
+        ActivityListRowView(activityListRow: ActivityListRow(name: "Monday", dayOfWeek: "Monday", exercises: List()))
     }
+}
+
+extension ExerciseForDB {
+    
+    func cast() -> Exercise {
+        return Exercise(bodyPart: self.bodyPart,
+                        equipment: self.equipment,
+                        gifUrl: self.gifUrl,
+                        id: self.idOfExercise,
+                        name: self.name,
+                        target: self.target)
+    }
+    
 }

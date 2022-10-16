@@ -1,6 +1,8 @@
 import Foundation
+import RealmSwift
 
 struct ActivityListRow {
-    var title: String
-    var exercises: [Exercise]?
+    var name: String
+    var dayOfWeek: String
+    var exercises: List<ExerciseForDB>
 }

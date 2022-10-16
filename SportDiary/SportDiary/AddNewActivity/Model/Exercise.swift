@@ -1,6 +1,7 @@
 import Foundation
+import RealmSwift
 
-struct Exercise: Codable, Identifiable {
+struct Exercise: Codable, Identifiable, Hashable {
     var bodyPart: String
     var equipment: String
     var gifUrl: String
