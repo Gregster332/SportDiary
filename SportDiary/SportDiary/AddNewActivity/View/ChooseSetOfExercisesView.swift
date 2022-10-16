@@ -18,54 +18,62 @@ struct ChooseSetOfExercisesView: View {
     
     var body: some View {
         ZStack {
-            if let error = addNewActivityViewModel.isError {
-                Text("Some error here: \(error.localizedDescription)")
-            } else if addNewActivityViewModel.isLoading {
-                ProgressView().progressViewStyle(.circular)
-            } else if !addNewActivityViewModel.fetchedExercises.isEmpty {
-                ZStack(alignment: .bottom) {
-                    VStack {
-                        CustomNavigationBar(headerText: Text("Choose exercises"), rightButtonTextStyle: nil) {
-                            selectedTab -= 1
-                        }
-                        .background(Color("navBarColor"))
-                        
-                        HStack {
-                            Image(systemName: "magnifyingglass")
-                                .font(.title3)
-                            TextField("Search...", text: $searchedText)
-                                .textInputAutocapitalization(.never)
-                        }
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 5)
-                                .stroke(Color("navBarColor"), lineWidth: 1)
-                        )
-                        .padding(.horizontal, 8)
-                        
-                        ScrollView {
-                            VStack(spacing: 16) {
-                                ForEach(serchedResults) { exercise in
-                                    ExerciseView(
-                                        exercise: exercise
-                                    )
-                                }
-                            }
-                            .padding(.top, 8)
-                        }
+            VStack {
+                CustomNavigationBar(headerText: Text("Choose exercises"), rightButtonTextStyle: nil) {
+                    withAnimation(.easeInOut) {
+                        selectedTab -= 1
                     }
-                    
-                    Button {
-                        selectedTab += 1
-                    } label: {
-                        Text("Next")
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity, maxHeight: 40)
+                }
+                .background(Color("navBarColor"))
+                
+                if let error = addNewActivityViewModel.isError {
+                    Text("Some error here: \(error.localizedDescription)")
+                        .frame(maxHeight: .infinity)
+                } else if addNewActivityViewModel.isLoading {
+                    ProgressView().progressViewStyle(.circular)
+                        .frame(maxHeight: .infinity)
+                } else if !addNewActivityViewModel.fetchedExercises.isEmpty {
+                    ZStack(alignment: .bottom) {
+                        VStack {
+                            HStack {
+                                Image(systemName: "magnifyingglass")
+                                    .font(.title3)
+                                TextField("Search...", text: $searchedText)
+                                    .textInputAutocapitalization(.never)
+                            }
+                            .padding()
                             .background(
                                 RoundedRectangle(cornerRadius: 5)
-                                    .fill(.black)
+                                    .stroke(Color("navBarColor"), lineWidth: 1)
                             )
-                            .padding(.horizontal)
+                            .padding(.horizontal, 8)
+                            
+                            ScrollView {
+                                VStack(spacing: 16) {
+                                    ForEach(serchedResults) { exercise in
+                                        ExerciseView(
+                                            exercise: exercise
+                                        )
+                                    }
+                                }
+                                .padding(.top, 8)
+                            }
+                        }
+                        
+                        Button {
+                            withAnimation(.easeInOut) {
+                                selectedTab += 1
+                            }
+                        } label: {
+                            Text("Next")
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity, maxHeight: 40)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 5)
+                                        .fill(.black)
+                                )
+                                .padding(.horizontal)
+                        }
                     }
                 }
             }

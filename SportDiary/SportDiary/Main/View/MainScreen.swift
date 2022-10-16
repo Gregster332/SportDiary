@@ -26,7 +26,6 @@ struct TabViewItem: View {
     var body: some View {
         VStack {
             type.image
-                //.foregroundColor(.orange)
                 .renderingMode(.template)
             type.text
 
@@ -43,12 +42,14 @@ struct MainScreen: View {
     }
     
     var body: some View {
-            TabView {
+        TabView {
                 ActivityListView()
                     .tabItem { TabViewItem(type: .activities) }
+                    
                 
-                Text("Data")
+                UserHeathView()
                     .tabItem { TabViewItem(type: .healthData) }
+                    
                 
                 Text("Hi")
                     .tabItem { TabViewItem(type: .settings) }

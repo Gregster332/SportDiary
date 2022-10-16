@@ -16,7 +16,9 @@ struct AddNewActivityDaySelectionSection: View {
         VStack(alignment: .center, spacing: 16) {
             
             Button {
-                toggleDropdownList.toggle()
+                withAnimation(.easeInOut) {
+                    toggleDropdownList.toggle()
+                }
             } label: {
                 HStack {
                     Text(viewModel.selectedDay == .none ? "Choose the day for new activity" : viewModel.selectedDay.rawValue)
@@ -47,12 +49,21 @@ struct AddNewActivityDaySelectionSection: View {
                     VStack(alignment: .leading) {
                         ForEach(DayOfWeek.allCases, id: \.self) { day in
                             Button {
-                                viewModel.selectedDay = day
-                                toggleDropdownList.toggle()
+                                withAnimation(.easeInOut) {
+                                    viewModel.selectedDay = day
+                                    toggleDropdownList.toggle()
+                                }
                             } label: {
                                 Text(day.rawValue)
                                     .foregroundColor(.black)
-                                    .padding(3)
+                                    .padding(.horizontal, 8)
+                                    .padding(.vertical, 4)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 10).fill(.thinMaterial)
+                                    )
+                                    .padding(.vertical, 2)
+                                    .padding(.horizontal, 8)
+                                    
                             }
 
                         }

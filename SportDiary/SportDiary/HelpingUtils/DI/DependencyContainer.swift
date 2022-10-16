@@ -14,6 +14,11 @@ func buildContainer() -> Container {
         return RealMManagerImpl()
     }
     .inObjectScope(.container)
+    
+    container.register(HealthKitAssistant.self) { _ in
+        return HealthKitAssistantImpl()
+    }
+    .inObjectScope(.container)
 
     return container
 }

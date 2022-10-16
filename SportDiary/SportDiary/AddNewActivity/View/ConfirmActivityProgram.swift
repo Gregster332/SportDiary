@@ -11,7 +11,9 @@ struct ConfirmActivityProgram: View {
     var body: some View {
         VStack {
             CustomNavigationBar(headerText: Text("Confirm Program"), rightButtonTextStyle: nil) {
-                selectedTab -= 1
+                withAnimation(.easeInOut) {
+                    selectedTab -= 1
+                }
             }
             .background(Color("navBarColor"))
             
@@ -99,7 +101,9 @@ struct ConfirmActivityProgram: View {
                         dayOfProgram: addNewActivityViewModel.selectedDay.rawValue,
                         exercises: addNewActivityViewModel.finalActivityProgram.convertToList())
                 )
-                presentationMode.wrappedValue.dismiss()
+                withAnimation(.easeInOut) {
+                    presentationMode.wrappedValue.dismiss()
+                }
             } label: {
                 Text("Confirm")
                     .foregroundColor(.white)

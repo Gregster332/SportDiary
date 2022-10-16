@@ -24,6 +24,10 @@
 		D09DC0A028FAF87D007DDACC /* ExerciseForDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC09F28FAF87D007DDACC /* ExerciseForDB.swift */; };
 		D09DC0A228FAF8E0007DDACC /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0A128FAF8E0007DDACC /* Array+Extension.swift */; };
 		D09DC0A428FAF9AC007DDACC /* Exercise+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0A328FAF9AC007DDACC /* Exercise+Extension.swift */; };
+		D09DC0A828FBFB1D007DDACC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09DC0A728FBFB1D007DDACC /* HealthKit.framework */; };
+		D09DC0AA28FBFBC4007DDACC /* HealthKitAssistantImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0A928FBFBC4007DDACC /* HealthKitAssistantImpl.swift */; };
+		D09DC0AD28FBFF4E007DDACC /* UserHeathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0AC28FBFF4E007DDACC /* UserHeathView.swift */; };
+		D09DC0AF28FBFF76007DDACC /* HealthKitAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0AE28FBFF76007DDACC /* HealthKitAssistant.swift */; };
 		D0B78B4028F05DC1006F07A1 /* SportDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */; };
 		D0B78B4228F05DC1006F07A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B4128F05DC1006F07A1 /* ContentView.swift */; };
 		D0B78B4428F05DC2006F07A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B78B4328F05DC2006F07A1 /* Assets.xcassets */; };
@@ -60,6 +64,11 @@
 		D09DC09F28FAF87D007DDACC /* ExerciseForDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseForDB.swift; sourceTree = "<group>"; };
 		D09DC0A128FAF8E0007DDACC /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		D09DC0A328FAF9AC007DDACC /* Exercise+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+Extension.swift"; sourceTree = "<group>"; };
+		D09DC0A528FBFB1D007DDACC /* SportDiary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SportDiary.entitlements; sourceTree = "<group>"; };
+		D09DC0A728FBFB1D007DDACC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		D09DC0A928FBFBC4007DDACC /* HealthKitAssistantImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAssistantImpl.swift; sourceTree = "<group>"; };
+		D09DC0AC28FBFF4E007DDACC /* UserHeathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeathView.swift; sourceTree = "<group>"; };
+		D09DC0AE28FBFF76007DDACC /* HealthKitAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAssistant.swift; sourceTree = "<group>"; };
 		D0B78B3C28F05DC1006F07A1 /* SportDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDiaryApp.swift; sourceTree = "<group>"; };
 		D0B78B4128F05DC1006F07A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +100,7 @@
 				D09DC09828F9E8C0007DDACC /* Realm in Frameworks */,
 				D0B78B8628F58D90006F07A1 /* Swinject in Frameworks */,
 				D042311028F59F2600FF1D89 /* FLAnimatedImage in Frameworks */,
+				D09DC0A828FBFB1D007DDACC /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +130,7 @@
 			children = (
 				D042311428F59F7100FF1D89 /* NetworkManager.swift */,
 				D09DC07F28F9D9B9007DDACC /* RealMManager.swift */,
+				D09DC0AE28FBFF76007DDACC /* HealthKitAssistant.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -142,11 +153,28 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		D09DC0A628FBFB1D007DDACC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D09DC0A728FBFB1D007DDACC /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D09DC0AB28FBFF20007DDACC /* UserHealth */ = {
+			isa = PBXGroup;
+			children = (
+				D09DC0AC28FBFF4E007DDACC /* UserHeathView.swift */,
+			);
+			path = UserHealth;
+			sourceTree = "<group>";
+		};
 		D0B78B3328F05DC1006F07A1 = {
 			isa = PBXGroup;
 			children = (
 				D0B78B3E28F05DC1006F07A1 /* SportDiary */,
 				D0B78B3D28F05DC1006F07A1 /* Products */,
+				D09DC0A628FBFB1D007DDACC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +189,7 @@
 		D0B78B3E28F05DC1006F07A1 /* SportDiary */ = {
 			isa = PBXGroup;
 			children = (
+				D09DC0A528FBFB1D007DDACC /* SportDiary.entitlements */,
 				D0B78B5128F06896006F07A1 /* Info.plist */,
 				D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */,
 				D042311328F59F5C00FF1D89 /* Protocols */,
@@ -168,6 +197,7 @@
 				D0B78B6228F40442006F07A1 /* UIComponents */,
 				D0B78B5428F3FC18006F07A1 /* Main */,
 				D0B78B5A28F40053006F07A1 /* ActivityList */,
+				D09DC0AB28FBFF20007DDACC /* UserHealth */,
 				D0B78B6728F407D2006F07A1 /* AddNewActivity */,
 				D0B78B4328F05DC2006F07A1 /* Assets.xcassets */,
 				D0B78B4528F05DC2006F07A1 /* Preview Content */,
@@ -305,6 +335,7 @@
 		D0B78B8728F58DB3006F07A1 /* HelpingUtils */ = {
 			isa = PBXGroup;
 			children = (
+				D09DC0A928FBFBC4007DDACC /* HealthKitAssistantImpl.swift */,
 				D09DC08128F9D9C0007DDACC /* DB */,
 				D09DC07A28F9D825007DDACC /* Extensions */,
 				D042311228F59F5000FF1D89 /* Networking */,
@@ -395,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D042311528F59F7100FF1D89 /* NetworkManager.swift in Sources */,
+				D09DC0AA28FBFBC4007DDACC /* HealthKitAssistantImpl.swift in Sources */,
 				D09DC08328F9D9D5007DDACC /* RealMManagerImpl.swift in Sources */,
 				D09DC0A028FAF87D007DDACC /* ExerciseForDB.swift in Sources */,
 				D09DC07728F9CF21007DDACC /* MainScreenViewModel.swift in Sources */,
@@ -410,7 +442,9 @@
 				D09DC07C28F9D83D007DDACC /* View+Extension.swift in Sources */,
 				D0B78B7428F421B3006F07A1 /* Exercise.swift in Sources */,
 				D0B78B6C28F40816006F07A1 /* ChooseSetOfExercisesView.swift in Sources */,
+				D09DC0AF28FBFF76007DDACC /* HealthKitAssistant.swift in Sources */,
 				D0B78B4228F05DC1006F07A1 /* ContentView.swift in Sources */,
+				D09DC0AD28FBFF4E007DDACC /* UserHeathView.swift in Sources */,
 				D0B78B8D28F58EE8006F07A1 /* InjectPropertyWrapper.swift in Sources */,
 				D0B78B5928F3FC4B006F07A1 /* MainScreen.swift in Sources */,
 				D09DC07528F88D75007DDACC /* ConfirmActivityProgram.swift in Sources */,
@@ -549,6 +583,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SportDiary/SportDiary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SportDiary/Preview Content\"";
@@ -556,12 +591,15 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportDiary/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires health data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -580,6 +618,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SportDiary/SportDiary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SportDiary/Preview Content\"";
@@ -587,12 +626,15 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportDiary/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires health data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

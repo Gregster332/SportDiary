@@ -16,7 +16,6 @@ class ActivityListViewModel: ObservableObject {
     
     func deleteExerciseProgram(program: ExerciseProgram, index: Int) {
         realmManager.deleteObject(exerciseProgram: program)
-        //exercisesPrograms.remove(at: index)
         getAllExercisesPrograms()
     }
     

@@ -25,17 +25,24 @@ struct ActivityListView: View {
                                         exercises: activityListViewModel.exercisesPrograms[index].exercises
                                     )
                                 )
-                                
-                                Button {
-                                    activityListViewModel.deleteExerciseProgram(program: activityListViewModel.exercisesPrograms[index],
-                                                                                index: index)
-                                } label: {
-                                    Image(systemName: "trash.circle.fill")
-                                        .font(.title)
-                                        .foregroundColor(.red)
+                                if index != 0 || activityListViewModel.exercisesPrograms.count == 1 {
+                                    Button {
+                                        withAnimation(.easeInOut) {
+                                            activityListViewModel.deleteExerciseProgram(program: activityListViewModel.exercisesPrograms[index],
+                                                                                        index: index)
+                                        }
+                                    } label: {
+                                        Image(systemName: "trash.circle.fill")
+                                            .font(.title)
+                                            .foregroundColor(.red)
+                                    }
+                                    .padding(.trailing)
+                                    .padding(.top)
+                                } else {
+                                    Text("Delete other first")
+                                        .padding(.trailing)
+                                        .padding(.top)
                                 }
-                                .padding(.trailing)
-                                .padding(.top)
                             }
                         }
                     }

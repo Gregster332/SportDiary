@@ -9,7 +9,9 @@ struct ChooseDayOfActivityView: View {
     var body: some View {
         VStack {
             CustomNavigationBar(headerText: Text("Choose day"), rightButtonTextStyle: nil) {
-                presentationMode.wrappedValue.dismiss()
+                withAnimation(.easeInOut) {
+                    presentationMode.wrappedValue.dismiss()
+                }
             }
             .background(Color("navBarColor"))
             
@@ -17,7 +19,9 @@ struct ChooseDayOfActivityView: View {
             
             if addNewActivityViewModel.selectedDay != .none {
                 Button {
-                    selectedTab += 1
+                    withAnimation(.easeInOut) {
+                        selectedTab += 1
+                    }
                 } label: {
                     Text("Next")
                         .foregroundColor(.black)

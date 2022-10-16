@@ -32,7 +32,9 @@ struct ExerciseView: View {
                 
                 
                 Button {
-                    openForMoreInformation.toggle()
+                    withAnimation(.easeInOut) {
+                        openForMoreInformation.toggle()
+                    }
                 } label: {
                     HStack {
                         Text(openForMoreInformation ? "Close" : "More information")
@@ -75,11 +77,13 @@ struct ExerciseView: View {
                             .stroke(Color.gray, lineWidth: 1))
         .padding(.horizontal, 8)
         .onTapGesture {
-            if !addNewActivityViewModel.finalActivityProgram.contains(where: { exercise in
-                self.exercise.id == exercise.id
-            }) {
-                addedInActivityProgram = true
-                addNewActivityViewModel.finalActivityProgram.append(self.exercise)
+            withAnimation(.easeInOut) {
+                if !addNewActivityViewModel.finalActivityProgram.contains(where: { exercise in
+                    self.exercise.id == exercise.id
+                }) {
+                    addedInActivityProgram = true
+                    addNewActivityViewModel.finalActivityProgram.append(self.exercise)
+                }
             }
         }
     }
