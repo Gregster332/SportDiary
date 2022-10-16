@@ -8,14 +8,6 @@ class RealMManagerImpl: RealMManager {
     
     init() {
         realm = try! Realm()
-        
-//        do {
-//            try realm.write({
-//                realm.create(ExerciseProgram.self)
-//            })
-//        } catch let error {
-//            fatalError(error.localizedDescription)
-//        }
     }
     
     func saveActivityProgram(_ program: ExerciseProgram) {
@@ -28,8 +20,17 @@ class RealMManagerImpl: RealMManager {
         }
     }
     
-    func getAllExercises() -> Results<ExerciseProgram> {
-        return realm.objects(ExerciseProgram.self)
+    func getAllExercises() -> [ExerciseProgram] {
+        let objects = realm.objects(ExerciseProgram.self)
+        var newList: [ExerciseProgram] = []
+        for obj in objects {
+            if !obj.isInvalidated {
+                
+                newList.append(obj)
+                
+            }
+        }
+        return newList
     }
     
     func deleteObject(exerciseProgram: ExerciseProgram) {

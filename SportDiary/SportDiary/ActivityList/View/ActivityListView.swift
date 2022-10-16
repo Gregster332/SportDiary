@@ -16,19 +16,19 @@ struct ActivityListView: View {
         NavigationView {
             VStack {
                     ScrollView {
-                        ForEach(activityListViewModel.exercisesPrograms, id: \.self) { program in
+                        ForEach(activityListViewModel.exercisesPrograms.indices, id: \.self) { index in
                             ZStack(alignment: .topTrailing) {
                                 ActivityListRowView(
                                     activityListRow: ActivityListRow(
-                                        name: program.name,
-                                        dayOfWeek: program.dayOfProgram,
-                                        exercises: program.exercises
+                                        name: activityListViewModel.exercisesPrograms[index].name,
+                                        dayOfWeek: activityListViewModel.exercisesPrograms[index].dayOfProgram,
+                                        exercises: activityListViewModel.exercisesPrograms[index].exercises
                                     )
                                 )
                                 
                                 Button {
-                                    activityListViewModel.deleteExerciseProgram(program: program)
-                                    activityListViewModel.getAllExercisesPrograms()
+                                    activityListViewModel.deleteExerciseProgram(program: activityListViewModel.exercisesPrograms[index],
+                                                                                index: index)
                                 } label: {
                                     Image(systemName: "trash.circle.fill")
                                         .font(.title)

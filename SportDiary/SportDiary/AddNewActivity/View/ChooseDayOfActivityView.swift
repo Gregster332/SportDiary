@@ -18,7 +18,6 @@ struct ChooseDayOfActivityView: View {
             if addNewActivityViewModel.selectedDay != .none {
                 Button {
                     selectedTab += 1
-                    print(selectedTab)
                 } label: {
                     Text("Next")
                         .foregroundColor(.black)
