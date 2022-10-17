@@ -4,6 +4,7 @@ class AddNewActivityViewModel: ObservableObject {
     
     @Published var isLoading: Bool = false
     @Published var isLoadingNeeded: Bool = true
+    @Published var showListIsEmptyAlert: Bool = false
     @Published var isError: Error? = nil
     @Published var fetchedExercises: [Exercise] = []
     @Published var selectedDay: DayOfWeek = .none

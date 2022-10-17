@@ -4,6 +4,7 @@ import RealmSwift
 struct ConfirmActivityProgram: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var addNewActivityViewModel: AddNewActivityViewModel
     @State private var text: String = ""
     @Binding var selectedTab: Int
@@ -29,11 +30,7 @@ struct ConfirmActivityProgram: View {
                 .padding(.horizontal, 8)
                 .padding(.vertical, 8)
             }
-            .overlay(
-                RoundedRectangle(cornerRadius: 5)
-                    .stroke(.black, lineWidth: 1)
-            )
-            .padding(.horizontal, 8)
+            .modifier(Rounded(strokeColor: colorScheme == .light ? Color.black : Color.white))
             
             Group {
                 HStack(alignment: .center) {
@@ -48,11 +45,7 @@ struct ConfirmActivityProgram: View {
                 .padding(.horizontal, 8)
                 .padding(.vertical, 8)
             }
-            .overlay(
-                RoundedRectangle(cornerRadius: 5)
-                    .stroke(.black, lineWidth: 1)
-            )
-            .padding(.horizontal, 8)
+            .modifier(Rounded(strokeColor: colorScheme == .light ? Color.black : Color.white))
             
             Group {
                 VStack(alignment: .leading) {
@@ -75,11 +68,7 @@ struct ConfirmActivityProgram: View {
                             }
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(
-                                RoundedRectangle(cornerRadius: 5)
-                                    .stroke(Color("navBarColor"), lineWidth: 1)
-                            )
-                            .padding(.bottom, 8)
+                            .modifier(BackgroundRounded(strokeColor: Color("navBarColor")))
                         }
                     }
                     .padding(.vertical, 8)
@@ -88,32 +77,41 @@ struct ConfirmActivityProgram: View {
                 .padding(.horizontal, 8)
                 .padding(.vertical, 8)
             }
-            .overlay(
-                RoundedRectangle(cornerRadius: 5)
-                    .stroke(.black, lineWidth: 1)
-            )
-            .padding(.horizontal, 8)
+            .modifier(Rounded(strokeColor: colorScheme == .light ? Color.black : Color.white))
             
             Button {
-                addNewActivityViewModel.saveNewProgram(
-                    program: ExerciseProgram(
-                        name: text,
-                        dayOfProgram: addNewActivityViewModel.selectedDay.rawValue,
-                        exercises: addNewActivityViewModel.finalActivityProgram.convertToList())
-                )
-                withAnimation(.easeInOut) {
-                    presentationMode.wrappedValue.dismiss()
+                if !addNewActivityViewModel.finalActivityProgram.isEmpty {
+                    addNewActivityViewModel.saveNewProgram(
+                        program: ExerciseProgram(
+                            name: text,
+                            dayOfProgram: addNewActivityViewModel.selectedDay.rawValue,
+                            exercises: addNewActivityViewModel.finalActivityProgram.convertToList())
+                    )
+                    withAnimation(.easeInOut) {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                } else {
+                    addNewActivityViewModel.showListIsEmptyAlert = true
                 }
             } label: {
                 Text("Confirm")
-                    .foregroundColor(.white)
+                    .foregroundColor(colorScheme == .light ? .white : .black)
                     .frame(maxWidth: .infinity, maxHeight: 40)
                     .background(
                         RoundedRectangle(cornerRadius: 5)
-                            .fill(.black)
+                            .fill(colorScheme == .light ? .black : .white)
                     )
                     .padding(.horizontal, 8)
             }
+            .alert(!text.isEmpty ? "No exercises in list and you should choose some. Tap OK and choose exercises." : "Name of program is empty. Please type something.", isPresented: $addNewActivityViewModel.showListIsEmptyAlert, actions: {
+                Button("OK", role: .cancel) {
+                    if !text.isEmpty {
+                        withAnimation(.easeInOut) {
+                            selectedTab -= 1
+                        }
+                    }
+                }
+            })
             
             .navigationBarHidden(true)
         }
@@ -126,6 +124,7 @@ struct ConfirmActivityProgram_Previews: PreviewProvider {
     
     static var previews: some View {
         ConfirmActivityProgram(selectedTab: .constant(1))
+            .preferredColorScheme(.dark)
             .environmentObject(viewModel)
     }
 }

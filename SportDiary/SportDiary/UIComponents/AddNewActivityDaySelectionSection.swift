@@ -1,15 +1,9 @@
-//
-//  AddNewActivitySection.swift
-//  SportDiary
-//
-//  Created by Grigory Zenkov on 10.10.2022.
-//
-
 import SwiftUI
 
 struct AddNewActivityDaySelectionSection: View {
     
     @EnvironmentObject var viewModel: AddNewActivityViewModel
+    @Environment(\.colorScheme) var colorScheme
     @State private var toggleDropdownList = false
     
     var body: some View {
@@ -23,7 +17,7 @@ struct AddNewActivityDaySelectionSection: View {
                 HStack {
                     Text(viewModel.selectedDay == .none ? "Choose the day for new activity" : viewModel.selectedDay.rawValue)
                         .font(.system(size: 14))
-                        .foregroundColor(Color.black)
+                        .foregroundColor(colorScheme == .light ? .black : .white)
                     
                     Spacer()
                     
@@ -31,17 +25,13 @@ struct AddNewActivityDaySelectionSection: View {
                         .resizable()
                         .frame(width: 9, height: 5)
                         .font(Font.system(size: 9, weight: .medium))
-                        .foregroundColor(Color.black)
+                        .foregroundColor(colorScheme == .light ? .black : .white)
                 }
                 .padding(.horizontal)
                 .cornerRadius(5)
                 .frame(maxWidth: .infinity)
                 .frame(height: 40)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.gray, lineWidth: 1)
-                )
-                .padding(.horizontal, 16)
+                .modifier(Rounded(strokeColor: .gray, padding: 16))
             }
             
             if toggleDropdownList {
@@ -55,7 +45,7 @@ struct AddNewActivityDaySelectionSection: View {
                                 }
                             } label: {
                                 Text(day.rawValue)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(colorScheme == .light ? .black : .white)
                                     .padding(.horizontal, 8)
                                     .padding(.vertical, 4)
                                     .background(
@@ -72,11 +62,7 @@ struct AddNewActivityDaySelectionSection: View {
                     
                 }
                 .frame(maxHeight: 150)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.gray, lineWidth: 1)
-                )
-                .padding(.horizontal, 16)
+                .modifier(Rounded(strokeColor: .gray, padding: 16))
             }
         }
     }
@@ -88,6 +74,7 @@ struct AddNewActivitySection_Previews: PreviewProvider {
     
     static var previews: some View {
         AddNewActivityDaySelectionSection()
+            .preferredColorScheme(.dark)
             .environmentObject(viewModel)
     }
 }

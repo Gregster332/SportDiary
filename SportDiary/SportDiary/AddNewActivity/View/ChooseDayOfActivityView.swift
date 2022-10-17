@@ -4,6 +4,7 @@ struct ChooseDayOfActivityView: View {
     
     @EnvironmentObject var addNewActivityViewModel: AddNewActivityViewModel
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.colorScheme) var colorScheme
     @Binding var selectedTab: Int
     
     var body: some View {
@@ -24,15 +25,12 @@ struct ChooseDayOfActivityView: View {
                     }
                 } label: {
                     Text("Next")
-                        .foregroundColor(.black)
+                        .foregroundColor(colorScheme == .light ? .black : .white)
                         .frame(maxWidth: .infinity, maxHeight: 40)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 5)
-                                .stroke(Color("navBarColor"), lineWidth: 1)
-                        )
-                        .padding(.horizontal)
+                        .background(colorScheme == .light ? .clear : Color("navBarColor"))
+                        .modifier(Rounded(strokeColor: Color("navBarColor"), padding: 16))
                 }
-
+                
             }
             
             Spacer()
@@ -48,44 +46,7 @@ struct ChooseDayOfActivity_Previews: PreviewProvider {
     
     static var previews: some View {
         ChooseDayOfActivityView(selectedTab: .constant(1))
+            .preferredColorScheme(.dark)
             .environmentObject(viewModel)
-    }
-}
-
-
-struct CustomNavigationBar: View {
-    
-    let headerText: Text
-    let rightButtonTextStyle: Button<Text>?
-    let goBackAction: () -> Void
-    
-    var body: some View {
-        HStack {
-            Button {
-                goBackAction()
-            } label: {
-                Image(systemName: "chevron.left")
-                    .foregroundColor(.black)
-                    .frame(width: 24,
-                           height: 24)
-            }
-            
-            Spacer()
-            
-            if rightButtonTextStyle == nil {
-            headerText
-                .font(.headline)
-                .foregroundColor(.black)
-                .padding(.trailing, 24)
-            }
-            
-            Spacer()
-            
-            if rightButtonTextStyle != nil {
-                rightButtonTextStyle
-            }
-        }
-        .frame(height: 42)
-        .padding(.horizontal)
     }
 }

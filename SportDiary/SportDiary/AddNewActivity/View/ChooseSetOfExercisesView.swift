@@ -61,8 +61,12 @@ struct ChooseSetOfExercisesView: View {
                         }
                         
                         Button {
-                            withAnimation(.easeInOut) {
-                                selectedTab += 1
+                            if !addNewActivityViewModel.finalActivityProgram.isEmpty {
+                                withAnimation(.easeInOut) {
+                                    selectedTab += 1
+                                }
+                            } else {
+                                addNewActivityViewModel.showListIsEmptyAlert = true
                             }
                         } label: {
                             Text("Next")
@@ -74,6 +78,13 @@ struct ChooseSetOfExercisesView: View {
                                 )
                                 .padding(.horizontal)
                         }
+                        .alert("List of exercises is empty", isPresented: $addNewActivityViewModel.showListIsEmptyAlert, actions: {
+                            Button("OK", role: .cancel) {
+                                addNewActivityViewModel.showListIsEmptyAlert = false
+                            }
+                        }, message: {
+                            Text("Choose some exercises first and then tap Next button")
+                        })
                     }
                 }
             }

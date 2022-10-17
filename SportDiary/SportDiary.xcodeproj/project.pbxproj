@@ -10,6 +10,9 @@
 		D042311028F59F2600FF1D89 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = D042310F28F59F2600FF1D89 /* FLAnimatedImage */; };
 		D042311528F59F7100FF1D89 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042311428F59F7100FF1D89 /* NetworkManager.swift */; };
 		D042311728F5A36300FF1D89 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042311628F5A36300FF1D89 /* GifView.swift */; };
+		D06ED4A228FDCEC80074322D /* BackgroundRoundedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06ED4A128FDCEC80074322D /* BackgroundRoundedViewModifier.swift */; };
+		D06ED4A428FDCEF20074322D /* RoundedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06ED4A328FDCEF20074322D /* RoundedViewModifier.swift */; };
+		D06ED4A628FDCF1C0074322D /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06ED4A528FDCF1C0074322D /* CustomNavigationBar.swift */; };
 		D09DC07328F85A78007DDACC /* ChooseDayOfActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */; };
 		D09DC07528F88D75007DDACC /* ConfirmActivityProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07428F88D75007DDACC /* ConfirmActivityProgram.swift */; };
 		D09DC07728F9CF21007DDACC /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07628F9CF21007DDACC /* MainScreenViewModel.swift */; };
@@ -52,6 +55,9 @@
 /* Begin PBXFileReference section */
 		D042311428F59F7100FF1D89 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D042311628F5A36300FF1D89 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
+		D06ED4A128FDCEC80074322D /* BackgroundRoundedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundRoundedViewModifier.swift; sourceTree = "<group>"; };
+		D06ED4A328FDCEF20074322D /* RoundedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewModifier.swift; sourceTree = "<group>"; };
+		D06ED4A528FDCF1C0074322D /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDayOfActivityView.swift; sourceTree = "<group>"; };
 		D09DC07428F88D75007DDACC /* ConfirmActivityProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmActivityProgram.swift; sourceTree = "<group>"; };
 		D09DC07628F9CF21007DDACC /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
@@ -133,6 +139,15 @@
 				D09DC0AE28FBFF76007DDACC /* HealthKitAssistant.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D06ED4A028FDCEAA0074322D /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D06ED4A128FDCEC80074322D /* BackgroundRoundedViewModifier.swift */,
+				D06ED4A328FDCEF20074322D /* RoundedViewModifier.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 		D09DC07A28F9D825007DDACC /* Extensions */ = {
@@ -286,9 +301,11 @@
 		D0B78B6228F40442006F07A1 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				D06ED4A028FDCEAA0074322D /* ViewModifiers */,
 				D0B78B6328F40469006F07A1 /* ActivityListRowView.swift */,
 				D0B78B6D28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift */,
 				D0B78B5228F07B4D006F07A1 /* ExerciseView.swift */,
+				D06ED4A528FDCF1C0074322D /* CustomNavigationBar.swift */,
 				D042311628F5A36300FF1D89 /* GifView.swift */,
 				D09DC07D28F9D854007DDACC /* PageView.swift */,
 			);
@@ -430,12 +447,14 @@
 				D09DC08328F9D9D5007DDACC /* RealMManagerImpl.swift in Sources */,
 				D09DC0A028FAF87D007DDACC /* ExerciseForDB.swift in Sources */,
 				D09DC07728F9CF21007DDACC /* MainScreenViewModel.swift in Sources */,
+				D06ED4A428FDCEF20074322D /* RoundedViewModifier.swift in Sources */,
 				D09DC07928F9D149007DDACC /* AddNewActivityPageView.swift in Sources */,
 				D0B78B8928F58DDC006F07A1 /* Resolver.swift in Sources */,
 				D0B78B5328F07B4D006F07A1 /* ExerciseView.swift in Sources */,
 				D0B78B6628F4049E006F07A1 /* ActivityListRow.swift in Sources */,
 				D0B78B6428F40469006F07A1 /* ActivityListRowView.swift in Sources */,
 				D09DC09E28FAF854007DDACC /* ExercisesProgram.swift in Sources */,
+				D06ED4A628FDCF1C0074322D /* CustomNavigationBar.swift in Sources */,
 				D0B78B6128F401D3006F07A1 /* ActivityListViewModel.swift in Sources */,
 				D0B78B7028F41551006F07A1 /* AddNewActivityViewModel.swift in Sources */,
 				D0B78B8B28F58E23006F07A1 /* DependencyContainer.swift in Sources */,
@@ -458,6 +477,7 @@
 				D042311728F5A36300FF1D89 /* GifView.swift in Sources */,
 				D09DC0A428FAF9AC007DDACC /* Exercise+Extension.swift in Sources */,
 				D0B78B5F28F40099006F07A1 /* ActivityListView.swift in Sources */,
+				D06ED4A228FDCEC80074322D /* BackgroundRoundedViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
