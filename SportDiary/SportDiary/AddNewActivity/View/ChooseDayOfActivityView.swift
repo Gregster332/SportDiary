@@ -3,9 +3,9 @@ import SwiftUI
 struct ChooseDayOfActivityView: View {
     
     @EnvironmentObject var addNewActivityViewModel: AddNewActivityViewModel
+    
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.colorScheme) var colorScheme
-    @Binding var selectedTab: Int
     
     var body: some View {
         VStack {
@@ -21,7 +21,7 @@ struct ChooseDayOfActivityView: View {
             if addNewActivityViewModel.selectedDay != .none {
                 Button {
                     withAnimation(.easeInOut) {
-                        selectedTab += 1
+                        addNewActivityViewModel.selectedTab += 1
                     }
                 } label: {
                     Text("Next")
@@ -42,10 +42,10 @@ struct ChooseDayOfActivityView: View {
 
 struct ChooseDayOfActivity_Previews: PreviewProvider {
     
-    static let viewModel = AddNewActivityViewModel()
+    static let viewModel = AddNewActivityViewModel(networkManager: NetworkManagerImpl(), realmManager: RealMManagerImpl())
     
     static var previews: some View {
-        ChooseDayOfActivityView(selectedTab: .constant(1))
+        ChooseDayOfActivityView()
             .preferredColorScheme(.dark)
             .environmentObject(viewModel)
     }

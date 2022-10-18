@@ -5,10 +5,14 @@ class ActivityListViewModel: ObservableObject {
     
     let dayOfWeeks: DayOfWeek = .monday
     
+    private var realmManager: RealMManager
+    
     @Published var exercisesPrograms: [ExerciseProgram] = []
     @Published var addNewActivityProgramIsOpen: Bool = false
     
-    @Inject private var realmManager: RealMManager
+    init(realmManager: RealMManager) {
+        self.realmManager = realmManager
+    }
     
     func getAllExercisesPrograms() {
         exercisesPrograms = Array(realmManager.getAllExercises())

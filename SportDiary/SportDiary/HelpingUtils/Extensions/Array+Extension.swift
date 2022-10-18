@@ -12,3 +12,17 @@ extension Array where Element == Exercise {
         return newList
     }
 }
+
+extension Array where Element == Step {
+    
+    func getOnlySteps() -> [(String, Double)] {
+        let newArray: [(String, Double)] = self.compactMap { step in
+            if step.count != 0 {
+                return (step.date.toString(), step.count)
+            } else {
+                return nil
+            }
+        }
+        return newArray
+    }
+}

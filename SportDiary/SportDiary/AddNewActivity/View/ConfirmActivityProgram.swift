@@ -5,15 +5,14 @@ struct ConfirmActivityProgram: View {
     
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.colorScheme) var colorScheme
+    
     @EnvironmentObject var addNewActivityViewModel: AddNewActivityViewModel
-    @State private var text: String = ""
-    @Binding var selectedTab: Int
     
     var body: some View {
         VStack {
             CustomNavigationBar(headerText: Text("Confirm Program"), rightButtonTextStyle: nil) {
                 withAnimation(.easeInOut) {
-                    selectedTab -= 1
+                    addNewActivityViewModel.selectedTab -= 1
                 }
             }
             .background(Color("navBarColor"))
@@ -23,7 +22,7 @@ struct ConfirmActivityProgram: View {
                     Text("Set the name for program")
                         .font(.title3)
                         .fontWeight(.semibold)
-                    TextField("Some name", text: $text)
+                    TextField("Some name", text: $addNewActivityViewModel.nameOfProgram)
                         .underlineTextField()
                 }
                 .frame(maxWidth: .infinity)
@@ -81,12 +80,12 @@ struct ConfirmActivityProgram: View {
             
             Button {
                 if !addNewActivityViewModel.finalActivityProgram.isEmpty {
-                    if text.isEmpty {
+                    if addNewActivityViewModel.nameOfProgram.isEmpty {
                         addNewActivityViewModel.showListIsEmptyAlert = true
                     } else {
                         addNewActivityViewModel.saveNewProgram(
                             program: ExerciseProgram(
-                                name: text,
+                                name: addNewActivityViewModel.nameOfProgram,
                                 dayOfProgram: addNewActivityViewModel.selectedDay.rawValue,
                                 exercises: addNewActivityViewModel.finalActivityProgram.convertToList())
                         )
@@ -107,11 +106,11 @@ struct ConfirmActivityProgram: View {
                     )
                     .padding(.horizontal, 8)
             }
-            .alert(!text.isEmpty ? "No exercises in list and you should choose some. Tap OK and choose exercises." : "Name of program is empty. Please type something.", isPresented: $addNewActivityViewModel.showListIsEmptyAlert, actions: {
+            .alert(!addNewActivityViewModel.nameOfProgram.isEmpty ? "No exercises in list and you should choose some. Tap OK and choose exercises." : "Name of program is empty. Please type something.", isPresented: $addNewActivityViewModel.showListIsEmptyAlert, actions: {
                 Button("OK", role: .cancel) {
-                    if !text.isEmpty {
+                    if !addNewActivityViewModel.nameOfProgram.isEmpty {
                         withAnimation(.easeInOut) {
-                            selectedTab -= 1
+                            addNewActivityViewModel.selectedTab -= 1
                         }
                     }
                 }
@@ -124,10 +123,10 @@ struct ConfirmActivityProgram: View {
 
 struct ConfirmActivityProgram_Previews: PreviewProvider {
     
-    static let viewModel = AddNewActivityViewModel()
+    static let viewModel = AddNewActivityViewModel(networkManager: NetworkManagerImpl(), realmManager: RealMManagerImpl())
     
     static var previews: some View {
-        ConfirmActivityProgram(selectedTab: .constant(1))
+        ConfirmActivityProgram()
             .preferredColorScheme(.dark)
             .environmentObject(viewModel)
     }

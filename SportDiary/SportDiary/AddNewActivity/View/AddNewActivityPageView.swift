@@ -2,18 +2,17 @@ import SwiftUI
 
 struct AddNewActivityPageView: View {
     
-    @State private var selectedTab: Int = 0
-    @StateObject var addNewActivityViewModel: AddNewActivityViewModel = AddNewActivityViewModel()
+    @StateObject var addNewActivityViewModel: AddNewActivityViewModel = Resolver.shared.resolve(AddNewActivityViewModel.self)
     
     var body: some View {
-        PageView(selection: $selectedTab, indexDisplayMode: .never, indexBackgroundDisplayMode: .never) {
-            ChooseDayOfActivityView(selectedTab: $selectedTab)
+        PageView(selection: $addNewActivityViewModel.selectedTab, indexDisplayMode: .never, indexBackgroundDisplayMode: .never) {
+            ChooseDayOfActivityView()
                 .tag(0)
                 
-            ChooseSetOfExercisesView(selectedTab: $selectedTab)
+            ChooseSetOfExercisesView()
                 .tag(1)
                 
-            ConfirmActivityProgram(selectedTab: $selectedTab)
+            ConfirmActivityProgram()
                 .tag(2)
                 
         }

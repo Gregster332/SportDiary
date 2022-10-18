@@ -70,7 +70,7 @@ struct AddNewActivityDaySelectionSection: View {
 
 struct AddNewActivitySection_Previews: PreviewProvider {
     
-    static let viewModel = AddNewActivityViewModel()
+    static let viewModel = AddNewActivityViewModel(networkManager: NetworkManagerImpl(), realmManager: RealMManagerImpl())
     
     static var previews: some View {
         AddNewActivityDaySelectionSection()

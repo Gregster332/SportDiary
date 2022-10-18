@@ -1,16 +1,9 @@
-//
-//  ActivityListView.swift
-//  SportDiary
-//
-//  Created by Grigory Zenkov on 10.10.2022.
-//
-
 import SwiftUI
 import RealmSwift
 
 struct ActivityListView: View {
     
-    @StateObject var activityListViewModel: ActivityListViewModel = ActivityListViewModel()
+    @StateObject var activityListViewModel: ActivityListViewModel = Resolver.shared.resolve(ActivityListViewModel.self)
     
     var body: some View {
         NavigationView {
@@ -25,7 +18,7 @@ struct ActivityListView: View {
                                         exercises: activityListViewModel.exercisesPrograms[index].exercises
                                     )
                                 )
-                                if index != 0 || activityListViewModel.exercisesPrograms.count == 1 {
+                                if index == activityListViewModel.exercisesPrograms.count - 1 {
                                     Button {
                                         withAnimation(.easeInOut) {
                                             activityListViewModel.deleteExerciseProgram(program: activityListViewModel.exercisesPrograms[index],

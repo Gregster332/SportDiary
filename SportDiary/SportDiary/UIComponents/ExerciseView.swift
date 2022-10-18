@@ -91,7 +91,7 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     
-    static let addNewActivityViewModel = AddNewActivityViewModel()
+    static let addNewActivityViewModel = AddNewActivityViewModel(networkManager: NetworkManagerImpl(), realmManager: RealMManagerImpl())
     
     static var previews: some View {
         ExerciseView(exercise: Exercise(

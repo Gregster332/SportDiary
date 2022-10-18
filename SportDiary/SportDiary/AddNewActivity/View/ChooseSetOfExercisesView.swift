@@ -4,25 +4,15 @@ struct ChooseSetOfExercisesView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.colorScheme) var colorScheme
-    @EnvironmentObject var addNewActivityViewModel: AddNewActivityViewModel
-    @State private var searchedText: String = ""
-    @Binding var selectedTab: Int
     
-    var serchedResults: [Exercise] {
-        if searchedText.isEmpty {
-            return addNewActivityViewModel.fetchedExercises
-        } else {
-            return addNewActivityViewModel.fetchedExercises
-                .filter({$0.name.contains(searchedText)})
-        }
-    }
+    @EnvironmentObject var addNewActivityViewModel: AddNewActivityViewModel
     
     var body: some View {
         ZStack {
             VStack {
                 CustomNavigationBar(headerText: Text("Choose exercises"), rightButtonTextStyle: nil) {
                     withAnimation(.easeInOut) {
-                        selectedTab -= 1
+                        addNewActivityViewModel.selectedTab -= 1
                     }
                 }
                 .background(Color("navBarColor"))
@@ -39,7 +29,7 @@ struct ChooseSetOfExercisesView: View {
                             HStack {
                                 Image(systemName: "magnifyingglass")
                                     .font(.title3)
-                                TextField("Search...", text: $searchedText)
+                                TextField("Search...", text: $addNewActivityViewModel.searchedText)
                                     .textInputAutocapitalization(.never)
                             }
                             .padding()
@@ -47,7 +37,7 @@ struct ChooseSetOfExercisesView: View {
                             
                             ScrollView {
                                 VStack(spacing: 16) {
-                                    ForEach(serchedResults) { exercise in
+                                    ForEach(addNewActivityViewModel.serchedResults) { exercise in
                                         ExerciseView(
                                             exercise: exercise
                                         )
@@ -58,12 +48,8 @@ struct ChooseSetOfExercisesView: View {
                         }
                         
                         Button {
-                            if !addNewActivityViewModel.finalActivityProgram.isEmpty {
-                                withAnimation(.easeInOut) {
-                                    selectedTab += 1
-                                }
-                            } else {
-                                addNewActivityViewModel.showListIsEmptyAlert = true
+                            withAnimation(.easeInOut) {
+                                addNewActivityViewModel.nextButtonTapped()
                             }
                         } label: {
                             Text("Next")
@@ -97,9 +83,9 @@ struct ChooseSetOfExercisesView: View {
 }
 
 struct AddNewActivityView_Previews: PreviewProvider {
-    static let viewModel = AddNewActivityViewModel()
+    static let viewModel = AddNewActivityViewModel(networkManager: NetworkManagerImpl(), realmManager: RealMManagerImpl())
     static var previews: some View {
-        ChooseSetOfExercisesView(selectedTab: .constant(1))
+        ChooseSetOfExercisesView()
             .environmentObject(viewModel)
     }
 }

@@ -10,6 +10,6 @@ class Resolver {
     }
     
     func setDependencyContainer(_ container: Container) {
-            self.container = container
+        self.container = container
     }
 }

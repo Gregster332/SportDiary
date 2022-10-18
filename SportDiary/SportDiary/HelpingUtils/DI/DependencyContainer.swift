@@ -19,6 +19,21 @@ func buildContainer() -> Container {
         return HealthKitAssistantImpl()
     }
     .inObjectScope(.container)
+    
+    container.register(ActivityListViewModel.self) { resolver in
+        return ActivityListViewModel(realmManager: resolver.resolve(RealMManager.self)!)
+    }
+    .inObjectScope(.container)
+    
+    container.register(AddNewActivityViewModel.self) { resolver in
+        return AddNewActivityViewModel(networkManager: resolver.resolve(NetworkManger.self)!,
+                                       realmManager: resolver.resolve(RealMManager.self)!)
+    }
+    .inObjectScope(.container)
+    
+    container.register(UserHealthViewModel.self) { resolver in
+        return UserHealthViewModel(heakthKitAssistant: resolver.resolve(HealthKitAssistant.self)!)
+    }
 
     return container
 }

@@ -6,12 +6,29 @@ class AddNewActivityViewModel: ObservableObject {
     @Published var isLoadingNeeded: Bool = true
     @Published var showListIsEmptyAlert: Bool = false
     @Published var isError: Error? = nil
+    @Published var selectedTab: Int = 0
+    @Published var nameOfProgram: String = ""
+    @Published var searchedText: String = ""
     @Published var fetchedExercises: [Exercise] = []
     @Published var selectedDay: DayOfWeek = .none
     @Published var finalActivityProgram: [Exercise] = []
     
-    @Inject private var networkManager: NetworkManger
-    @Inject private var realmManager: RealMManager
+    private var networkManager: NetworkManger
+    private var realmManager: RealMManager
+    
+    var serchedResults: [Exercise] {
+        if searchedText.isEmpty {
+            return fetchedExercises
+        } else {
+            return fetchedExercises
+                .filter({$0.name.contains(searchedText)})
+        }
+    }
+    
+    init(networkManager: NetworkManger, realmManager: RealMManager) {
+        self.networkManager = networkManager
+        self.realmManager = realmManager
+    }
     
     func getListOfAllExercises() async throws {
         isLoading = true
@@ -35,5 +52,13 @@ class AddNewActivityViewModel: ObservableObject {
     
     func saveNewProgram(program: ExerciseProgram) {
         realmManager.saveActivityProgram(program)
+    }
+    
+    func nextButtonTapped() {
+        if !finalActivityProgram.isEmpty {
+                selectedTab += 1
+        } else {
+            showListIsEmptyAlert = true
+        }
     }
 }
