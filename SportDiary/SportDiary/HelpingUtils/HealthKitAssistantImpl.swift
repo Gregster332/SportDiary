@@ -30,7 +30,7 @@ class HealthKitAssistantImpl: HealthKitAssistant {
     
     func calculateSteps(completion: @escaping (HKStatisticsCollection?) -> Void) {
         let stepType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
-        let startDate = Calendar.current.date(byAdding: .day, value: -7, to: Date())
+        let startDate = Calendar.current.date(byAdding: .day, value: -15, to: Date())
         let anchorDate = Date.mondayAt12Am()
         let daily = DateComponents(day: 1)
         

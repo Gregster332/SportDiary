@@ -13,6 +13,8 @@
 		D06ED4A228FDCEC80074322D /* BackgroundRoundedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06ED4A128FDCEC80074322D /* BackgroundRoundedViewModifier.swift */; };
 		D06ED4A428FDCEF20074322D /* RoundedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06ED4A328FDCEF20074322D /* RoundedViewModifier.swift */; };
 		D06ED4A628FDCF1C0074322D /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06ED4A528FDCF1C0074322D /* CustomNavigationBar.swift */; };
+		D06ED4A928FDCFB20074322D /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06ED4A828FDCFB20074322D /* DayOfWeek.swift */; };
+		D06ED4AB28FDD2C10074322D /* ExerciseForDB+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06ED4AA28FDD2C10074322D /* ExerciseForDB+Extension.swift */; };
 		D09DC07328F85A78007DDACC /* ChooseDayOfActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */; };
 		D09DC07528F88D75007DDACC /* ConfirmActivityProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07428F88D75007DDACC /* ConfirmActivityProgram.swift */; };
 		D09DC07728F9CF21007DDACC /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07628F9CF21007DDACC /* MainScreenViewModel.swift */; };
@@ -32,7 +34,6 @@
 		D09DC0AD28FBFF4E007DDACC /* UserHeathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0AC28FBFF4E007DDACC /* UserHeathView.swift */; };
 		D09DC0AF28FBFF76007DDACC /* HealthKitAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0AE28FBFF76007DDACC /* HealthKitAssistant.swift */; };
 		D0B78B4028F05DC1006F07A1 /* SportDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */; };
-		D0B78B4228F05DC1006F07A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B4128F05DC1006F07A1 /* ContentView.swift */; };
 		D0B78B4428F05DC2006F07A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B78B4328F05DC2006F07A1 /* Assets.xcassets */; };
 		D0B78B4728F05DC2006F07A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B78B4628F05DC2006F07A1 /* Preview Assets.xcassets */; };
 		D0B78B4E28F05DF9006F07A1 /* NetworkManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B4D28F05DF9006F07A1 /* NetworkManagerImpl.swift */; };
@@ -58,6 +59,8 @@
 		D06ED4A128FDCEC80074322D /* BackgroundRoundedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundRoundedViewModifier.swift; sourceTree = "<group>"; };
 		D06ED4A328FDCEF20074322D /* RoundedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewModifier.swift; sourceTree = "<group>"; };
 		D06ED4A528FDCF1C0074322D /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		D06ED4A828FDCFB20074322D /* DayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
+		D06ED4AA28FDD2C10074322D /* ExerciseForDB+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExerciseForDB+Extension.swift"; sourceTree = "<group>"; };
 		D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDayOfActivityView.swift; sourceTree = "<group>"; };
 		D09DC07428F88D75007DDACC /* ConfirmActivityProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmActivityProgram.swift; sourceTree = "<group>"; };
 		D09DC07628F9CF21007DDACC /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
@@ -77,7 +80,6 @@
 		D09DC0AE28FBFF76007DDACC /* HealthKitAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAssistant.swift; sourceTree = "<group>"; };
 		D0B78B3C28F05DC1006F07A1 /* SportDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDiaryApp.swift; sourceTree = "<group>"; };
-		D0B78B4128F05DC1006F07A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D0B78B4328F05DC2006F07A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0B78B4628F05DC2006F07A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0B78B4D28F05DF9006F07A1 /* NetworkManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerImpl.swift; sourceTree = "<group>"; };
@@ -150,12 +152,21 @@
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
+		D06ED4A728FDCFA70074322D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D06ED4A828FDCFB20074322D /* DayOfWeek.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		D09DC07A28F9D825007DDACC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				D09DC07B28F9D83D007DDACC /* View+Extension.swift */,
 				D09DC0A128FAF8E0007DDACC /* Array+Extension.swift */,
 				D09DC0A328FAF9AC007DDACC /* Exercise+Extension.swift */,
+				D06ED4AA28FDD2C10074322D /* ExerciseForDB+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,6 +218,7 @@
 				D09DC0A528FBFB1D007DDACC /* SportDiary.entitlements */,
 				D0B78B5128F06896006F07A1 /* Info.plist */,
 				D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */,
+				D06ED4A728FDCFA70074322D /* Enums */,
 				D042311328F59F5C00FF1D89 /* Protocols */,
 				D0B78B8728F58DB3006F07A1 /* HelpingUtils */,
 				D0B78B6228F40442006F07A1 /* UIComponents */,
@@ -234,7 +246,6 @@
 				D0B78B5728F3FC37006F07A1 /* View */,
 				D0B78B5628F3FC30006F07A1 /* ViewModel */,
 				D0B78B5528F3FC29006F07A1 /* Model */,
-				D0B78B4128F05DC1006F07A1 /* ContentView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -462,13 +473,14 @@
 				D0B78B7428F421B3006F07A1 /* Exercise.swift in Sources */,
 				D0B78B6C28F40816006F07A1 /* ChooseSetOfExercisesView.swift in Sources */,
 				D09DC0AF28FBFF76007DDACC /* HealthKitAssistant.swift in Sources */,
-				D0B78B4228F05DC1006F07A1 /* ContentView.swift in Sources */,
 				D09DC0AD28FBFF4E007DDACC /* UserHeathView.swift in Sources */,
+				D06ED4A928FDCFB20074322D /* DayOfWeek.swift in Sources */,
 				D0B78B8D28F58EE8006F07A1 /* InjectPropertyWrapper.swift in Sources */,
 				D0B78B5928F3FC4B006F07A1 /* MainScreen.swift in Sources */,
 				D09DC07528F88D75007DDACC /* ConfirmActivityProgram.swift in Sources */,
 				D09DC07328F85A78007DDACC /* ChooseDayOfActivityView.swift in Sources */,
 				D09DC0A228FAF8E0007DDACC /* Array+Extension.swift in Sources */,
+				D06ED4AB28FDD2C10074322D /* ExerciseForDB+Extension.swift in Sources */,
 				D0B78B4E28F05DF9006F07A1 /* NetworkManagerImpl.swift in Sources */,
 				D0B78B6E28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift in Sources */,
 				D09DC08028F9D9B9007DDACC /* RealMManager.swift in Sources */,

@@ -3,6 +3,7 @@ import SwiftUI
 struct ChooseSetOfExercisesView: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var addNewActivityViewModel: AddNewActivityViewModel
     @State private var searchedText: String = ""
     @Binding var selectedTab: Int
@@ -42,11 +43,7 @@ struct ChooseSetOfExercisesView: View {
                                     .textInputAutocapitalization(.never)
                             }
                             .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius: 5)
-                                    .stroke(Color("navBarColor"), lineWidth: 1)
-                            )
-                            .padding(.horizontal, 8)
+                            .modifier(BackgroundRounded(strokeColor: Color("navBarColor")))
                             
                             ScrollView {
                                 VStack(spacing: 16) {
@@ -70,11 +67,11 @@ struct ChooseSetOfExercisesView: View {
                             }
                         } label: {
                             Text("Next")
-                                .foregroundColor(.white)
+                                .foregroundColor(colorScheme == .light ? .white : .black)
                                 .frame(maxWidth: .infinity, maxHeight: 40)
                                 .background(
                                     RoundedRectangle(cornerRadius: 5)
-                                        .fill(.black)
+                                        .fill(colorScheme == .light ? .black : .white)
                                 )
                                 .padding(.horizontal)
                         }

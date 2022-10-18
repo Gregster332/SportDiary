@@ -102,6 +102,7 @@ struct ExerciseView_Previews: PreviewProvider {
             name:"3/4 sit-up",
             target:"abs"
         ))
+        .preferredColorScheme(.dark)
         .environmentObject(addNewActivityViewModel)
     }
 }

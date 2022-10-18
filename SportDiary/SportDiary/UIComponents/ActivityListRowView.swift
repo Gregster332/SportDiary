@@ -5,6 +5,8 @@ struct ActivityListRowView: View {
     
     var activityListRow: ActivityListRow
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         VStack {
             HStack {
@@ -65,11 +67,7 @@ struct ActivityListRowView: View {
         }
         .padding(.vertical, 8)
         .frame(maxWidth: .infinity)
-        .overlay(
-            RoundedRectangle(cornerRadius: 5)
-                .stroke(.black, lineWidth: 2)
-        )
-        .padding(.horizontal, 8)
+        .modifier(Rounded(strokeColor: colorScheme == .light ? .black : .white, strokeLineWidth: 2))
     }
 }
 
@@ -77,17 +75,4 @@ struct ActivityListRow_Previews: PreviewProvider {
     static var previews: some View {
         ActivityListRowView(activityListRow: ActivityListRow(name: "Monday", dayOfWeek: "Monday", exercises: List()))
     }
-}
-
-extension ExerciseForDB {
-    
-    func cast() -> Exercise {
-        return Exercise(bodyPart: self.bodyPart,
-                        equipment: self.equipment,
-                        gifUrl: self.gifUrl,
-                        id: self.idOfExercise,
-                        name: self.name,
-                        target: self.target)
-    }
-    
 }

@@ -57,7 +57,7 @@ struct ConfirmActivityProgram: View {
                         ForEach(addNewActivityViewModel.finalActivityProgram.indices, id: \.self) { index in
                             HStack {
                                 Text(addNewActivityViewModel.finalActivityProgram[index].name)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(colorScheme == .light ? .black : .white)
                                 Spacer()
                                 Button {
                                     addNewActivityViewModel.finalActivityProgram.remove(at: index)
@@ -81,14 +81,18 @@ struct ConfirmActivityProgram: View {
             
             Button {
                 if !addNewActivityViewModel.finalActivityProgram.isEmpty {
-                    addNewActivityViewModel.saveNewProgram(
-                        program: ExerciseProgram(
-                            name: text,
-                            dayOfProgram: addNewActivityViewModel.selectedDay.rawValue,
-                            exercises: addNewActivityViewModel.finalActivityProgram.convertToList())
-                    )
-                    withAnimation(.easeInOut) {
-                        presentationMode.wrappedValue.dismiss()
+                    if text.isEmpty {
+                        addNewActivityViewModel.showListIsEmptyAlert = true
+                    } else {
+                        addNewActivityViewModel.saveNewProgram(
+                            program: ExerciseProgram(
+                                name: text,
+                                dayOfProgram: addNewActivityViewModel.selectedDay.rawValue,
+                                exercises: addNewActivityViewModel.finalActivityProgram.convertToList())
+                        )
+                        withAnimation(.easeInOut) {
+                            presentationMode.wrappedValue.dismiss()
+                        }
                     }
                 } else {
                     addNewActivityViewModel.showListIsEmptyAlert = true

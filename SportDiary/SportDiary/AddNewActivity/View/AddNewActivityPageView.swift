@@ -6,7 +6,7 @@ struct AddNewActivityPageView: View {
     @StateObject var addNewActivityViewModel: AddNewActivityViewModel = AddNewActivityViewModel()
     
     var body: some View {
-        PageView(selection: $selectedTab) {
+        PageView(selection: $selectedTab, indexDisplayMode: .never, indexBackgroundDisplayMode: .never) {
             ChooseDayOfActivityView(selectedTab: $selectedTab)
                 .tag(0)
                 
