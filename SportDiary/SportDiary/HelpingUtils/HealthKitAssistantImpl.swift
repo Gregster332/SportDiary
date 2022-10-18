@@ -28,17 +28,29 @@ class HealthKitAssistantImpl: HealthKitAssistant {
         }
     }
     
-    func calculateSteps(completion: @escaping (HKStatisticsCollection?) -> Void) {
+    func calculateStepsByWeek(timePeriod: TimePeriod, completion: @escaping (Date, HKStatisticsCollection?) -> Void) {
         let stepType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
-        let startDate = Calendar.current.date(byAdding: .day, value: -15, to: Date())
-        let anchorDate = Date.mondayAt12Am()
-        let daily = DateComponents(day: 1)
+        var startDate: Date?
+        var daily: DateComponents?
+        
+        switch timePeriod {
+        case .byWeek:
+            
+            startDate = Calendar.current.date(byAdding: .day, value: -7, to: Date())
+            daily = DateComponents(day: 1)
+        case .byMothsOfYear:
+            startDate = Calendar.current.date(byAdding: .month, value: -12, to: Date())
+            daily = DateComponents(month: 1)
+        case .byYears:
+            startDate = Calendar.current.date(byAdding: .year, value: -7, to: Date())
+            daily = DateComponents(year: 1)
+        }
         
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options: .strictEndDate)
-        self.query = HKStatisticsCollectionQuery(quantityType: stepType, quantitySamplePredicate: predicate, options: .cumulativeSum, anchorDate: anchorDate, intervalComponents: daily)
+        self.query = HKStatisticsCollectionQuery(quantityType: stepType, quantitySamplePredicate: predicate, options: .cumulativeSum, anchorDate: startDate!, intervalComponents: daily!)
         
         query!.initialResultsHandler = { query, statisticsCollection, error in
-            completion(statisticsCollection)
+            completion(startDate!, statisticsCollection)
         }
         
         if let healthStore = healthStore, let query = self.query {
@@ -46,4 +58,10 @@ class HealthKitAssistantImpl: HealthKitAssistant {
         }
     }
     
+}
+
+enum TimePeriod {
+    case byWeek
+    case byMothsOfYear
+    case byYears
 }
