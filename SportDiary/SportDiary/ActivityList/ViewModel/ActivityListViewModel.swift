@@ -15,7 +15,14 @@ class ActivityListViewModel: ObservableObject {
     }
     
     func getAllExercisesPrograms() {
-        exercisesPrograms = Array(realmManager.getAllExercises())
+        exercisesPrograms = Array(realmManager.getAllExercisesPrograms())
+    }
+    
+    func getExercisesByExercisesIds(ids: [String]) -> [Exercise] {
+        let objects = realmManager.getObjectsByExercisesIds(ids: ids).map { exerciseForDB in
+            return exerciseForDB.cast()
+        }
+        return objects
     }
     
     func deleteExerciseProgram(program: ExerciseProgram, index: Int) {

@@ -2,7 +2,7 @@ import Foundation
 
 enum DayOfWeek: String, CaseIterable {
     static var allCases: [DayOfWeek] {
-        return [.monday, .tuesday, .wednesday, .tuesday, .friday, .saturday, .sunday]
+        return [.monday, .tuesday, .wednesday, .thusday, .friday, .saturday, .sunday]
     }
     
     case monday = "Monday",

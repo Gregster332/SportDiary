@@ -18,7 +18,6 @@
 		D06ED4AE28FE94100074322D /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = D06ED4AD28FE94100074322D /* SwiftUICharts */; };
 		D06ED4B128FEAD900074322D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D06ED4B028FEAD900074322D /* Lottie */; };
 		D06ED4B328FEAFFA0074322D /* stepsAnim.json in Resources */ = {isa = PBXBuildFile; fileRef = D06ED4B228FEAFFA0074322D /* stepsAnim.json */; };
-		D06ED4B528FEB1530074322D /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06ED4B428FEB1530074322D /* StepsView.swift */; };
 		D06ED4B728FEB17A0074322D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06ED4B628FEB17A0074322D /* Date+Extension.swift */; };
 		D09DC07328F85A78007DDACC /* ChooseDayOfActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */; };
 		D09DC07528F88D75007DDACC /* ConfirmActivityProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC07428F88D75007DDACC /* ConfirmActivityProgram.swift */; };
@@ -36,7 +35,7 @@
 		D09DC0A428FAF9AC007DDACC /* Exercise+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0A328FAF9AC007DDACC /* Exercise+Extension.swift */; };
 		D09DC0A828FBFB1D007DDACC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09DC0A728FBFB1D007DDACC /* HealthKit.framework */; };
 		D09DC0AA28FBFBC4007DDACC /* HealthKitAssistantImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0A928FBFBC4007DDACC /* HealthKitAssistantImpl.swift */; };
-		D09DC0AD28FBFF4E007DDACC /* UserHeathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0AC28FBFF4E007DDACC /* UserHeathView.swift */; };
+		D09DC0AD28FBFF4E007DDACC /* StepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0AC28FBFF4E007DDACC /* StepsView.swift */; };
 		D09DC0AF28FBFF76007DDACC /* HealthKitAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DC0AE28FBFF76007DDACC /* HealthKitAssistant.swift */; };
 		D0B78B4028F05DC1006F07A1 /* SportDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */; };
 		D0B78B4428F05DC2006F07A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B78B4328F05DC2006F07A1 /* Assets.xcassets */; };
@@ -56,6 +55,7 @@
 		D0B78B8928F58DDC006F07A1 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B8828F58DDC006F07A1 /* Resolver.swift */; };
 		D0B78B8B28F58E23006F07A1 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B8A28F58E23006F07A1 /* DependencyContainer.swift */; };
 		D0B78B8D28F58EE8006F07A1 /* InjectPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B78B8C28F58EE8006F07A1 /* InjectPropertyWrapper.swift */; };
+		D0C392B528FEFD21002D1967 /* UserHealthViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C392B428FEFD21002D1967 /* UserHealthViewNew.swift */; };
 		D0FB1BDA28FEEACE0007ABC9 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB1BD928FEEACE0007ABC9 /* LottieView.swift */; };
 		D0FB1BDC28FEEB0A0007ABC9 /* UserHealthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB1BDB28FEEB0A0007ABC9 /* UserHealthViewModel.swift */; };
 		D0FB1BDE28FEED8B0007ABC9 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB1BDD28FEED8B0007ABC9 /* Step.swift */; };
@@ -70,7 +70,6 @@
 		D06ED4A828FDCFB20074322D /* DayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
 		D06ED4AA28FDD2C10074322D /* ExerciseForDB+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExerciseForDB+Extension.swift"; sourceTree = "<group>"; };
 		D06ED4B228FEAFFA0074322D /* stepsAnim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stepsAnim.json; sourceTree = "<group>"; };
-		D06ED4B428FEB1530074322D /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
 		D06ED4B628FEB17A0074322D /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDayOfActivityView.swift; sourceTree = "<group>"; };
 		D09DC07428F88D75007DDACC /* ConfirmActivityProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmActivityProgram.swift; sourceTree = "<group>"; };
@@ -87,7 +86,7 @@
 		D09DC0A528FBFB1D007DDACC /* SportDiary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SportDiary.entitlements; sourceTree = "<group>"; };
 		D09DC0A728FBFB1D007DDACC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		D09DC0A928FBFBC4007DDACC /* HealthKitAssistantImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAssistantImpl.swift; sourceTree = "<group>"; };
-		D09DC0AC28FBFF4E007DDACC /* UserHeathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeathView.swift; sourceTree = "<group>"; };
+		D09DC0AC28FBFF4E007DDACC /* StepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
 		D09DC0AE28FBFF76007DDACC /* HealthKitAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAssistant.swift; sourceTree = "<group>"; };
 		D0B78B3C28F05DC1006F07A1 /* SportDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B78B3F28F05DC1006F07A1 /* SportDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDiaryApp.swift; sourceTree = "<group>"; };
@@ -108,6 +107,7 @@
 		D0B78B8828F58DDC006F07A1 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 		D0B78B8A28F58E23006F07A1 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		D0B78B8C28F58EE8006F07A1 /* InjectPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectPropertyWrapper.swift; sourceTree = "<group>"; };
+		D0C392B428FEFD21002D1967 /* UserHealthViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHealthViewNew.swift; sourceTree = "<group>"; };
 		D0FB1BD928FEEACE0007ABC9 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D0FB1BDB28FEEB0A0007ABC9 /* UserHealthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHealthViewModel.swift; sourceTree = "<group>"; };
 		D0FB1BDD28FEED8B0007ABC9 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
@@ -412,8 +412,8 @@
 		D0FB1BD828FEEA5E0007ABC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D09DC0AC28FBFF4E007DDACC /* UserHeathView.swift */,
-				D06ED4B428FEB1530074322D /* StepsView.swift */,
+				D09DC0AC28FBFF4E007DDACC /* StepsView.swift */,
+				D0C392B428FEFD21002D1967 /* UserHealthViewNew.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -510,7 +510,6 @@
 				D09DC08328F9D9D5007DDACC /* RealMManagerImpl.swift in Sources */,
 				D0FB1BDC28FEEB0A0007ABC9 /* UserHealthViewModel.swift in Sources */,
 				D09DC0A028FAF87D007DDACC /* ExerciseForDB.swift in Sources */,
-				D06ED4B528FEB1530074322D /* StepsView.swift in Sources */,
 				D09DC07728F9CF21007DDACC /* MainScreenViewModel.swift in Sources */,
 				D0FB1BDA28FEEACE0007ABC9 /* LottieView.swift in Sources */,
 				D06ED4A428FDCEF20074322D /* RoundedViewModifier.swift in Sources */,
@@ -519,6 +518,7 @@
 				D0B78B5328F07B4D006F07A1 /* ExerciseView.swift in Sources */,
 				D0B78B6628F4049E006F07A1 /* ActivityListRow.swift in Sources */,
 				D0B78B6428F40469006F07A1 /* ActivityListRowView.swift in Sources */,
+				D0C392B528FEFD21002D1967 /* UserHealthViewNew.swift in Sources */,
 				D09DC09E28FAF854007DDACC /* ExercisesProgram.swift in Sources */,
 				D06ED4A628FDCF1C0074322D /* CustomNavigationBar.swift in Sources */,
 				D0FB1BDE28FEED8B0007ABC9 /* Step.swift in Sources */,
@@ -529,7 +529,7 @@
 				D0B78B7428F421B3006F07A1 /* Exercise.swift in Sources */,
 				D0B78B6C28F40816006F07A1 /* ChooseSetOfExercisesView.swift in Sources */,
 				D09DC0AF28FBFF76007DDACC /* HealthKitAssistant.swift in Sources */,
-				D09DC0AD28FBFF4E007DDACC /* UserHeathView.swift in Sources */,
+				D09DC0AD28FBFF4E007DDACC /* StepsView.swift in Sources */,
 				D06ED4A928FDCFB20074322D /* DayOfWeek.swift in Sources */,
 				D0B78B8D28F58EE8006F07A1 /* InjectPropertyWrapper.swift in Sources */,
 				D0B78B5928F3FC4B006F07A1 /* MainScreen.swift in Sources */,

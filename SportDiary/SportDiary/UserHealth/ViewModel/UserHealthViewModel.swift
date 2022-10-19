@@ -4,6 +4,8 @@ import HealthKit
 class UserHealthViewModel: ObservableObject {
     
     @Published var steps: [Step] = []
+    @Published var openInfo: Bool = false
+    @Published var favoriteColor: Int = 0
     
     var heakthKitAssistant: HealthKitAssistant
     
@@ -42,6 +44,11 @@ class UserHealthViewModel: ObservableObject {
                 }
             }
         })
+    }
+    
+    func onClose() {
+        favoriteColor = 0
+        steps.removeAll()
     }
     
 }

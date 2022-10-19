@@ -6,12 +6,12 @@ class ExerciseProgram: Object {
     @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var name: String = ""
     @Persisted var dayOfProgram: String = ""
-    @Persisted var exercises = List<ExerciseForDB>()
+    @Persisted var idsOfExercises = List<String>()
     
-    convenience init(name: String, dayOfProgram: String, exercises: List<ExerciseForDB>) {
+    convenience init(name: String, dayOfProgram: String, idsOfExercises: List<String>) {
         self.init()
         self.name = name
         self.dayOfProgram = dayOfProgram
-        self.exercises = exercises
+        self.idsOfExercises = idsOfExercises
     }
 }

@@ -70,7 +70,7 @@ struct ExerciseView: View {
         }
         .padding(.vertical, 8)
         .frame(maxWidth: .infinity)
-        .background(exercise.containedIn(addNewActivityViewModel.finalActivityProgram) ?
+        .background(exercise.id.containedIn(addNewActivityViewModel.finalActivityProgramIds) ?
                     RoundedRectangle(cornerRadius: 5)
                         .stroke(Color.green, lineWidth: 1) :
                         RoundedRectangle(cornerRadius: 5)
@@ -78,11 +78,11 @@ struct ExerciseView: View {
         .padding(.horizontal, 8)
         .onTapGesture {
             withAnimation(.easeInOut) {
-                if !addNewActivityViewModel.finalActivityProgram.contains(where: { exercise in
-                    self.exercise.id == exercise.id
+                if !addNewActivityViewModel.finalActivityProgramIds.contains(where: { id in
+                    self.exercise.id == id
                 }) {
                     addedInActivityProgram = true
-                    addNewActivityViewModel.finalActivityProgram.append(self.exercise)
+                    addNewActivityViewModel.finalActivityProgramIds.append(self.exercise.id)
                 }
             }
         }

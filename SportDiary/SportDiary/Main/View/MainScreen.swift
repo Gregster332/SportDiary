@@ -35,7 +35,7 @@ struct TabViewItem: View {
 
 struct MainScreen: View {
 
-    @StateObject var mainScreenViewModel: MainScreenViewModel = MainScreenViewModel()
+    @StateObject var mainScreenViewModel: MainScreenViewModel = Resolver.shared.resolve(MainScreenViewModel.self)
     
     init() {
         UITabBar.appearance().unselectedItemTintColor = UIColor(Color.gray)
@@ -47,7 +47,7 @@ struct MainScreen: View {
                     .tabItem { TabViewItem(type: .activities) }
                     
                 
-                UserHeathView()
+                UserHealthViewNew()
                     .tabItem { TabViewItem(type: .healthData) }
                     
                 
@@ -57,6 +57,9 @@ struct MainScreen: View {
             .accentColor(Color("navBarColor"))
             .onAppear {
                 print(Realm.Configuration.defaultConfiguration.fileURL)
+            }
+            .task(priority: .background) {
+                await mainScreenViewModel.fetchExercisesAndCache()
             }
     }
 }

@@ -73,6 +73,6 @@ struct ActivityListRowView: View {
 
 struct ActivityListRow_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityListRowView(activityListRow: ActivityListRow(name: "Monday", dayOfWeek: "Monday", exercises: List()))
+        ActivityListRowView(activityListRow: ActivityListRow(name: "Monday", dayOfWeek: "Monday", exercises: []))
     }
 }

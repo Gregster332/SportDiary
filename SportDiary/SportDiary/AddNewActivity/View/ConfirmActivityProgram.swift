@@ -53,17 +53,17 @@ struct ConfirmActivityProgram: View {
                         .fontWeight(.semibold)
                     
                     ScrollView(.vertical, showsIndicators: false) {
-                        ForEach(addNewActivityViewModel.finalActivityProgram.indices, id: \.self) { index in
+                        ForEach(addNewActivityViewModel.getExercisesByIds(ids: addNewActivityViewModel.finalActivityProgramIds), id: \.self) { exercise in
                             HStack {
-                                Text(addNewActivityViewModel.finalActivityProgram[index].name)
+                                Text(exercise.name)
                                     .foregroundColor(colorScheme == .light ? .black : .white)
                                 Spacer()
-                                Button {
-                                    addNewActivityViewModel.finalActivityProgram.remove(at: index)
-                                } label: {
-                                    Image(systemName: "trash.fill")
-                                        .foregroundColor(.red)
-                                }
+//                                Button {
+//                                    addNewActivityViewModel.finalActivityProgramIds.remove(at: index)
+//                                } label: {
+//                                    Image(systemName: "trash.fill")
+//                                        .foregroundColor(.red)
+//                                }
                             }
                             .padding()
                             .frame(maxWidth: .infinity)
@@ -79,7 +79,7 @@ struct ConfirmActivityProgram: View {
             .modifier(Rounded(strokeColor: colorScheme == .light ? Color.black : Color.white))
             
             Button {
-                if !addNewActivityViewModel.finalActivityProgram.isEmpty {
+                if !addNewActivityViewModel.finalActivityProgramIds.isEmpty {
                     if addNewActivityViewModel.nameOfProgram.isEmpty {
                         addNewActivityViewModel.showListIsEmptyAlert = true
                     } else {
@@ -87,7 +87,7 @@ struct ConfirmActivityProgram: View {
                             program: ExerciseProgram(
                                 name: addNewActivityViewModel.nameOfProgram,
                                 dayOfProgram: addNewActivityViewModel.selectedDay.rawValue,
-                                exercises: addNewActivityViewModel.finalActivityProgram.convertToList())
+                                idsOfExercises: addNewActivityViewModel.finalActivityProgramIds.convertToList())
                         )
                         withAnimation(.easeInOut) {
                             presentationMode.wrappedValue.dismiss()

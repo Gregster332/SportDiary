@@ -15,7 +15,7 @@ struct ActivityListView: View {
                                     activityListRow: ActivityListRow(
                                         name: activityListViewModel.exercisesPrograms[index].name,
                                         dayOfWeek: activityListViewModel.exercisesPrograms[index].dayOfProgram,
-                                        exercises: activityListViewModel.exercisesPrograms[index].exercises
+                                        exercises: activityListViewModel.getExercisesByExercisesIds(ids: Array(activityListViewModel.exercisesPrograms[index].idsOfExercises))
                                     )
                                 )
                                 if index == activityListViewModel.exercisesPrograms.count - 1 {

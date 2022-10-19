@@ -1,13 +1,13 @@
 import Foundation
 import RealmSwift
 
-extension Array where Element == Exercise {
+extension Array where Element == String {
     
-    func convertToList() -> RealmSwift.List<ExerciseForDB> {
-        let newList = RealmSwift.List<ExerciseForDB>()
+    func convertToList() -> RealmSwift.List<String> {
+        let newList = RealmSwift.List<String>()
         for elem in self {
-            let newElem = ExerciseForDB(elem)
-            newList.append(newElem)
+            //let newElem = ExerciseForDB(elem)
+            newList.append(elem)
         }
         return newList
     }

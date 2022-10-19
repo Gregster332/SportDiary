@@ -34,6 +34,7 @@ struct ChooseSetOfExercisesView: View {
                             }
                             .padding()
                             .modifier(BackgroundRounded(strokeColor: Color("navBarColor")))
+                            .padding(.horizontal, 8)
                             
                             ScrollView {
                                 VStack(spacing: 16) {
@@ -72,10 +73,8 @@ struct ChooseSetOfExercisesView: View {
                 }
             }
         }
-        .task {
-            if addNewActivityViewModel.isLoadingNeeded {
-                try? await addNewActivityViewModel.getListOfAllExercises()
-            }
+        .onAppear {
+            addNewActivityViewModel.getAllExercises()
         }
         
         .navigationBarHidden(true)

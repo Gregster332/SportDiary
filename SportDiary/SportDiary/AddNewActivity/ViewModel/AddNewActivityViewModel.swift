@@ -11,7 +11,7 @@ class AddNewActivityViewModel: ObservableObject {
     @Published var searchedText: String = ""
     @Published var fetchedExercises: [Exercise] = []
     @Published var selectedDay: DayOfWeek = .none
-    @Published var finalActivityProgram: [Exercise] = []
+    @Published var finalActivityProgramIds: [String] = []
     
     private var networkManager: NetworkManger
     private var realmManager: RealMManager
@@ -30,24 +30,36 @@ class AddNewActivityViewModel: ObservableObject {
         self.realmManager = realmManager
     }
     
-    func getListOfAllExercises() async throws {
-        isLoading = true
-        await networkManager.getAllExercises { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let exercises):
-                DispatchQueue.main.async {
-                    self.fetchedExercises = exercises
-                    self.isLoadingNeeded = false
-                    self.isLoading = false
-                }
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self.isError = error
-                    self.isLoading = false
-                }
-            }
+//    func getListOfAllExercises() async throws {
+//        isLoading = true
+//        await networkManager.getAllExercises { [weak self] result in
+//            guard let self = self else { return }
+//            switch result {
+//            case .success(let exercises):
+//                DispatchQueue.main.async {
+//                    self.fetchedExercises = exercises
+//                    self.isLoadingNeeded = false
+//                    self.isLoading = false
+//                }
+//            case .failure(let error):
+//                DispatchQueue.main.async {
+//                    self.isError = error
+//                    self.isLoading = false
+//                }
+//            }
+//        }
+//    }
+    
+    func getExercisesByIds(ids: [String]) -> [Exercise] {
+        return realmManager.getObjectsByExercisesIds(ids: ids).map { exerciseForDB in
+            exerciseForDB.cast()
         }
+    }
+    
+    func getAllExercises() {
+        fetchedExercises = realmManager.getAllExercises().map({ exerciseeForDB in
+            return exerciseeForDB.cast()
+        })
     }
     
     func saveNewProgram(program: ExerciseProgram) {
@@ -55,7 +67,7 @@ class AddNewActivityViewModel: ObservableObject {
     }
     
     func nextButtonTapped() {
-        if !finalActivityProgram.isEmpty {
+        if !finalActivityProgramIds.isEmpty {
                 selectedTab += 1
         } else {
             showListIsEmptyAlert = true

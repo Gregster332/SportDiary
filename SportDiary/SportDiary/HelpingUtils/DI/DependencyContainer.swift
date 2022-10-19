@@ -20,6 +20,12 @@ func buildContainer() -> Container {
     }
     .inObjectScope(.container)
     
+    container.register(MainScreenViewModel.self) { resolver in
+        return MainScreenViewModel(networkManager: resolver.resolve(NetworkManger.self)!,
+                                   realmManager: resolver.resolve(RealMManager.self)!)
+    }
+    .inObjectScope(.container)
+    
     container.register(ActivityListViewModel.self) { resolver in
         return ActivityListViewModel(realmManager: resolver.resolve(RealMManager.self)!)
     }
@@ -34,6 +40,7 @@ func buildContainer() -> Container {
     container.register(UserHealthViewModel.self) { resolver in
         return UserHealthViewModel(heakthKitAssistant: resolver.resolve(HealthKitAssistant.self)!)
     }
+    .inObjectScope(.container)
 
     return container
 }

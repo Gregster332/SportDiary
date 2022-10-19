@@ -4,5 +4,5 @@ import RealmSwift
 struct ActivityListRow {
     var name: String
     var dayOfWeek: String
-    var exercises: List<ExerciseForDB>
+    var exercises: [Exercise]
 }
