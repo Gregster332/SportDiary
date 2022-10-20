@@ -51,7 +51,7 @@ class AddNewActivityViewModel: ObservableObject {
     }
     
     func getExerciseByExerciseId(id: String) -> Exercise {
-        return realmManager.getObjecyByExerciseId(id: id).cast()
+        realmManager.getObjecyByExerciseId(id: id).cast()
     }
     
     func getAllExercises() {
@@ -78,7 +78,7 @@ class AddNewActivityViewModel: ObservableObject {
     }
     
     func getExercisesByTarget(target: String) -> [Exercise] {
-        return realmManager.getExercisesByTarget(target: target).map { exercisesForDB in
+        realmManager.getExercisesByTarget(target: target).map { exercisesForDB in
             return exercisesForDB.cast()
         }
     }

@@ -338,6 +338,7 @@
 				D0B78B6328F40469006F07A1 /* ActivityListRowView.swift */,
 				D0B78B6D28F40950006F07A1 /* AddNewActivityDaySelectionSection.swift */,
 				D0B78B5228F07B4D006F07A1 /* ExerciseView.swift */,
+				D0C392B629013BC5002D1967 /* TargetView.swift */,
 				D0FB1BD928FEEACE0007ABC9 /* LottieView.swift */,
 				D06ED4A528FDCF1C0074322D /* CustomNavigationBar.swift */,
 				D042311628F5A36300FF1D89 /* GifView.swift */,
@@ -379,7 +380,6 @@
 				D09DC07228F85A78007DDACC /* ChooseDayOfActivityView.swift */,
 				D09DC07428F88D75007DDACC /* ConfirmActivityProgram.swift */,
 				D09DC07828F9D149007DDACC /* AddNewActivityPageView.swift */,
-				D0C392B629013BC5002D1967 /* TargetView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
