@@ -17,13 +17,7 @@ struct ChooseSetOfExercisesView: View {
                 }
                 .background(Color("navBarColor"))
                 
-                if let error = addNewActivityViewModel.isError {
-                    Text("Some error here: \(error.localizedDescription)")
-                        .frame(maxHeight: .infinity)
-                } else if addNewActivityViewModel.isLoading {
-                    ProgressView().progressViewStyle(.circular)
-                        .frame(maxHeight: .infinity)
-                } else if !addNewActivityViewModel.fetchedExercises.isEmpty {
+                if !addNewActivityViewModel.isLoading {
                     ZStack(alignment: .bottom) {
                         VStack {
                             HStack {
@@ -31,20 +25,60 @@ struct ChooseSetOfExercisesView: View {
                                     .font(.title3)
                                 TextField("Search...", text: $addNewActivityViewModel.searchedText)
                                     .textInputAutocapitalization(.never)
+                                    .onSubmit {
+                                        addNewActivityViewModel.getAllExercises()
+                                        addNewActivityViewModel.fetchedExercises = addNewActivityViewModel.fetchedExercises.filter({$0.name.contains(addNewActivityViewModel.searchedText)})
+                                    }
                             }
                             .padding()
                             .modifier(BackgroundRounded(strokeColor: Color("navBarColor")))
                             .padding(.horizontal, 8)
                             
-                            ScrollView {
-                                VStack(spacing: 16) {
-                                    ForEach(addNewActivityViewModel.serchedResults) { exercise in
-                                        ExerciseView(
-                                            exercise: exercise
-                                        )
+                            if !addNewActivityViewModel.searchedText.isEmpty {
+                                if !addNewActivityViewModel.fetchedExercises.isEmpty {
+                                    ScrollView {
+                                        VStack(spacing: 16) {
+                                            ForEach(addNewActivityViewModel.fetchedExercises) { exercise in
+                                                ExerciseView(
+                                                    exercise: exercise
+                                                )
+                                            }
+                                        }
+                                        .padding(.top, 8)
                                     }
+                                } else {
+                                    Text("Type something and submit in search text field to find exercises")
+                                        .font(.largeTitle)
+                                        .fontWeight(.bold)
+                                        .multilineTextAlignment(.center)
+                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                                 }
-                                .padding(.top, 8)
+                            } else {
+                                VStack {
+                                    ScrollView {
+                                        VStack(spacing: 16) {
+                                            ForEach(addNewActivityViewModel.targets, id: \.self) { target in
+                                                TargetView(target: target)
+                                            }
+                                        }
+                                    }
+                                    
+                                    Button {
+                                        withAnimation(.easeInOut) {
+                                            addNewActivityViewModel.nextButtonTapped()
+                                        }
+                                    } label: {
+                                        Text("Next")
+                                            .foregroundColor(colorScheme == .light ? .white : .black)
+                                            .frame(maxWidth: .infinity, maxHeight: 40)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 5)
+                                                    .fill(colorScheme == .light ? .black : .white)
+                                            )
+                                            .padding(.horizontal)
+                                    }
+                                    
+                                }
                             }
                         }
                         
@@ -70,11 +104,11 @@ struct ChooseSetOfExercisesView: View {
                             Text("Choose some exercises first and then tap Next button")
                         })
                     }
+                } else {
+                    ProgressView().progressViewStyle(.circular)
+                        .frame(maxHeight: .infinity)
                 }
             }
-        }
-        .onAppear {
-            addNewActivityViewModel.getAllExercises()
         }
         
         .navigationBarHidden(true)

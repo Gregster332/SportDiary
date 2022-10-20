@@ -70,8 +70,18 @@ class RealMManagerImpl: RealMManager {
         return results
     }
     
+    func getObjecyByExerciseId(id: String) -> ExerciseForDB {
+        return realm.objects(ExerciseForDB.self).where({
+            $0.idOfExercise == id
+        }).first!
+    }
+    
     func getAllExercises() -> [ExerciseForDB] {
         return Array(realm.objects(ExerciseForDB.self))
+    }
+    
+    func getExercisesByTarget(target: String) -> [ExerciseForDB] {
+        return Array(realm.objects(ExerciseForDB.self).where({ $0.target == target }))
     }
 }
 

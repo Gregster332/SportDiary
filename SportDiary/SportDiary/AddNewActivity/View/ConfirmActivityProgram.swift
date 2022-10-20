@@ -53,17 +53,19 @@ struct ConfirmActivityProgram: View {
                         .fontWeight(.semibold)
                     
                     ScrollView(.vertical, showsIndicators: false) {
-                        ForEach(addNewActivityViewModel.getExercisesByIds(ids: addNewActivityViewModel.finalActivityProgramIds), id: \.self) { exercise in
+                        ForEach(addNewActivityViewModel.finalActivityProgramIds.indices, id: \.self) { index in
                             HStack {
-                                Text(exercise.name)
+                                Text(addNewActivityViewModel.getExerciseByExerciseId(
+                                    id: addNewActivityViewModel.finalActivityProgramIds[index]
+                                ).name)
                                     .foregroundColor(colorScheme == .light ? .black : .white)
                                 Spacer()
-//                                Button {
-//                                    addNewActivityViewModel.finalActivityProgramIds.remove(at: index)
-//                                } label: {
-//                                    Image(systemName: "trash.fill")
-//                                        .foregroundColor(.red)
-//                                }
+                                Button {
+                                    addNewActivityViewModel.finalActivityProgramIds.remove(at: index)
+                                } label: {
+                                    Image(systemName: "trash.fill")
+                                        .foregroundColor(.red)
+                                }
                             }
                             .padding()
                             .frame(maxWidth: .infinity)

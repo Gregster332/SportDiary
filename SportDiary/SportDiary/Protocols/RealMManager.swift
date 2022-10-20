@@ -8,4 +8,6 @@ protocol RealMManager {
     func getAllExercises() -> [ExerciseForDB]
     func saveExercises(exercises: [Exercise])
     func getObjectsByExercisesIds(ids: [String]) -> [ExerciseForDB]
+    func getObjecyByExerciseId(id: String) -> ExerciseForDB
+    func getExercisesByTarget(target: String) -> [ExerciseForDB]
 }

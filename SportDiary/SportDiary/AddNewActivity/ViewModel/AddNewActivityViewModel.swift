@@ -3,9 +3,7 @@ import Foundation
 class AddNewActivityViewModel: ObservableObject {
     
     @Published var isLoading: Bool = false
-    @Published var isLoadingNeeded: Bool = true
     @Published var showListIsEmptyAlert: Bool = false
-    @Published var isError: Error? = nil
     @Published var selectedTab: Int = 0
     @Published var nameOfProgram: String = ""
     @Published var searchedText: String = ""
@@ -13,12 +11,34 @@ class AddNewActivityViewModel: ObservableObject {
     @Published var selectedDay: DayOfWeek = .none
     @Published var finalActivityProgramIds: [String] = []
     
+    let targets = [
+        "abductors",
+        "abs",
+        "adductors",
+        "biceps",
+        "calves",
+        "cardiovascular system",
+        "delts",
+        "forearms",
+        "glutes",
+        "hamstrings",
+        "lats",
+        "levator scapulae",
+        "pectorals",
+        "quads",
+        "serratus anterior",
+        "spine",
+        "traps",
+        "triceps",
+        "upper back"
+    ]
+    
     private var networkManager: NetworkManger
     private var realmManager: RealMManager
     
     var serchedResults: [Exercise] {
         if searchedText.isEmpty {
-            return fetchedExercises
+            return []
         } else {
             return fetchedExercises
                 .filter({$0.name.contains(searchedText)})
@@ -30,40 +50,23 @@ class AddNewActivityViewModel: ObservableObject {
         self.realmManager = realmManager
     }
     
-//    func getListOfAllExercises() async throws {
-//        isLoading = true
-//        await networkManager.getAllExercises { [weak self] result in
-//            guard let self = self else { return }
-//            switch result {
-//            case .success(let exercises):
-//                DispatchQueue.main.async {
-//                    self.fetchedExercises = exercises
-//                    self.isLoadingNeeded = false
-//                    self.isLoading = false
-//                }
-//            case .failure(let error):
-//                DispatchQueue.main.async {
-//                    self.isError = error
-//                    self.isLoading = false
-//                }
-//            }
-//        }
-//    }
-    
-    func getExercisesByIds(ids: [String]) -> [Exercise] {
-        return realmManager.getObjectsByExercisesIds(ids: ids).map { exerciseForDB in
-            exerciseForDB.cast()
-        }
+    func getExerciseByExerciseId(id: String) -> Exercise {
+        return realmManager.getObjecyByExerciseId(id: id).cast()
     }
     
     func getAllExercises() {
-        fetchedExercises = realmManager.getAllExercises().map({ exerciseeForDB in
-            return exerciseeForDB.cast()
-        })
+        isLoading = true
+        if fetchedExercises.isEmpty {
+            fetchedExercises = realmManager.getAllExercises().map({ exerciseeForDB in
+                return exerciseeForDB.cast()
+            })
+        }
+        isLoading = false
     }
     
     func saveNewProgram(program: ExerciseProgram) {
         realmManager.saveActivityProgram(program)
+        selectedTab = 0
     }
     
     func nextButtonTapped() {
@@ -71,6 +74,12 @@ class AddNewActivityViewModel: ObservableObject {
                 selectedTab += 1
         } else {
             showListIsEmptyAlert = true
+        }
+    }
+    
+    func getExercisesByTarget(target: String) -> [Exercise] {
+        return realmManager.getExercisesByTarget(target: target).map { exercisesForDB in
+            return exercisesForDB.cast()
         }
     }
 }
